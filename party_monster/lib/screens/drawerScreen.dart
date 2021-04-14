@@ -26,7 +26,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
           Text(
             'PartyMonster',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 60),
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 55),
           ),
           Column(children: [
             TextButton(
@@ -51,7 +51,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -78,7 +78,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -105,7 +105,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -132,7 +132,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -140,7 +140,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
           ]),
           Center(
               child: Text(
-            '© 2021 KSM, All Rights Reserved',
+            '© 2021 HSM, All Rights Reserved',
             style: TextStyle(color: Colors.white, fontSize: 14),
           ))
         ],

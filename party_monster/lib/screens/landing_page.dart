@@ -1,6 +1,7 @@
 //Ovo je ono sto se pojavi kad pokrenemo aplikaciju
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:party_monster/screens/drawerScreen.dart';
 import 'package:party_monster/screens/home_page.dart';
 
@@ -28,9 +29,21 @@ class LandingPage extends StatelessWidget {
         }
         //Firebase app is loadig...
         return Scaffold(
-          body: Center(
-            child: Text("Ucitavanje aplikacije..."),
-          ),
+          body: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: <Color>[
+                    Colors.blue.shade900,
+                    Colors.red.shade900
+                  ])),
+              child: Center(
+                  child: const SpinKitFadingGrid(
+                //Ovo je loading animacija
+                color: Colors.purple,
+                shape: BoxShape.rectangle,
+              ))),
         );
       },
     );

@@ -12,7 +12,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('PartyMonster'),
+        title: Text('Odrasli'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -33,6 +33,36 @@ class _OdrasliPageState extends State<OdrasliPage> {
             "Oprema za zurke za odrasle",
             style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+//kategorije proizvoda
+class Categories extends StatefulWidget {
+  @override
+  _CategoriesState createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  List<String> categories = [
+    "Hrana",
+    "Pice",
+    "Zabava",
+    "Nargila",
+    "Dekoracija"
+  ];
+  int selectedIndex = 0; // prvi je uvek izabran po difoltu
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 25,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        itemBuilder: (context, index) => Text(
+          categories[index],
         ),
       ),
     );

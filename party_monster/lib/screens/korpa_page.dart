@@ -51,7 +51,7 @@ class _KorpaPageState extends State<KorpaPage> {
         child: Center(
           //Ovde ide sadrzaj strane
           child: Text(
-            "Ovde ce stajati proizvodi spremni za kupovinu.\nTakodje ovse ce se obavljati porucivanje",
+            "Ovde ce stajati proizvodi spremni za kupovinu.\n",
             style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
           ),
         ),

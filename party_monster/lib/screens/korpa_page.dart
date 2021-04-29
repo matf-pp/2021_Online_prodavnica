@@ -12,7 +12,7 @@ class _KorpaPageState extends State<KorpaPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('PartyMonster'),
+        title: Text('Moja korpa'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(

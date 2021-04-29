@@ -31,13 +31,15 @@ class _KorpaPageState extends State<KorpaPage> {
                 subtitle: new Text("cena"),
               )),
               Expanded(
-                  child: new MaterialButton(
-                onPressed: () {},
-                child: new Text(
-                  "Placanje",
-                  style: TextStyle(color: Colors.white),
+                child: new MaterialButton(
+                  onPressed: () {},
+                  child: new Text(
+                    "Placanje",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.red.shade900,
                 ),
-              ))
+              )
             ],
           )),
       body: Container(

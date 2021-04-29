@@ -12,7 +12,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Odrasli'),
+        title: Text('Odrasli '),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(

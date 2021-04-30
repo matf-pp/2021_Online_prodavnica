@@ -35,7 +35,7 @@ class _KorpaPageState extends State<KorpaPage> {
                   onPressed: () {},
                   child: new Text(
                     "Placanje",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   ),
                   color: Colors.red.shade900,
                 ),

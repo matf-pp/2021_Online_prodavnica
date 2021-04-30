@@ -83,33 +83,33 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 ],
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => IzdvojenoPage()),
-                );
-              },
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.whatshot_rounded,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'Izdvojeno',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30),
-                  )
-                ],
-              ),
-            ),
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => IzdvojenoPage()),
+            //     );
+            //   },
+            //   child: Row(
+            //     children: [
+            //       Icon(
+            //         Icons.whatshot_rounded,
+            //         color: Colors.white,
+            //         size: 40,
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text(
+            //         'Izdvojeno',
+            //         style: TextStyle(
+            //             color: Colors.white,
+            //             fontWeight: FontWeight.bold,
+            //             fontSize: 30),
+            //       )
+            //     ],
+            //   ),
+            // ),
             TextButton(
               onPressed: () {
                 Navigator.push(

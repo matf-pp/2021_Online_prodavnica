@@ -69,35 +69,35 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
             actions: <Widget>[
-              isNightMode
-                  ? IconButton(
-                      icon: Icon(
-                        Icons.wb_sunny_rounded,
-                        color: colorText,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          isNightMode = false;
-                          colorText = Colors.black;
-                          color1 = lightColor1;
-                          color2 = lightColor2;
-                        });
-                      },
-                    )
-                  : IconButton(
-                      icon: Icon(
-                        Icons.nightlight_round,
-                        color: colorText,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          isNightMode = true;
-                          colorText = Colors.white;
-                          color1 = nightColor1;
-                          color2 = nightColor2;
-                        });
-                      },
-                    ),
+              // isNightMode
+              //  ? IconButton(
+              // icon: Icon(
+              //  Icons.wb_sunny_rounded,
+              //  color: colorText,
+              //  ),
+              //  onPressed: () {
+              //  setState(() {
+              //   isNightMode = false;
+              //   colorText = Colors.black;
+              //    color1 = lightColor1;
+              //   color2 = lightColor2;
+              // });
+              //},
+              // )
+              // : IconButton(
+              // icon: Icon(
+              //   Icons.nightlight_round,
+              //  color: colorText,
+              //),
+              //onPressed: () {
+              //setState(() {
+              //isNightMode = true;
+              //colorText = Colors.white;
+              //color1 = nightColor1;
+              // color2 = nightColor2;
+              // });
+              // },
+              // ),
               IconButton(
                 icon: Icon(
                   Icons.shopping_bag_outlined,
@@ -167,23 +167,23 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     //Dugme IzdvojenoIzPonude
-                    Container(
-                      child: TextButton(
-                        style:
-                            TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => IzdvojenoPage()),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/izdvojenoIzPonude.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   child: TextButton(
+                    //     style:
+                    //         TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
+                    //     onPressed: () {
+                    //       Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => IzdvojenoPage()),
+                    //       );
+                    //     },
+                    //     child: Image.asset(
+                    //       'assets/izdvojenoIzPonude.png',
+                    //       fit: BoxFit.cover,
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

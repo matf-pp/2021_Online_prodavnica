@@ -13,7 +13,7 @@ class _DecaPageState extends State<DecaPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('PartyMonster'),
+        title: Text('Deca'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(

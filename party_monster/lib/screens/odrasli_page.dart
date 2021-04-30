@@ -1,6 +1,7 @@
 //Ovo je Odrasli page
 import 'package:flutter/material.dart';
 import 'package:party_monster/components/horrizontal_view_odrasli.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 class OdrasliPage extends StatefulWidget {
   @override
@@ -10,6 +11,21 @@ class OdrasliPage extends StatefulWidget {
 class _OdrasliPageState extends State<OdrasliPage> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = new Container(
+      height: 200.0,
+      child: Carousel(
+          boxFit: BoxFit.cover,
+          images: [
+            AssetImage('pictures/odrasli_carousel_pictures/pic1.jpeg'),
+            AssetImage('pictures/odrasli_carousel_pictures/pic2.jpeg'),
+            AssetImage('pictures/odrasli_carousel_pictures/pic3.jpeg'),
+            AssetImage('pictures/odrasli_carousel_pictures/pic4.jpeg'),
+            AssetImage('pictures/odrasli_carousel_pictures/pic5.jpeg'),
+          ],
+          autoplay: false,
+          animationCurve: Curves.fastOutSlowIn,
+          animationDuration: Duration(milliseconds: 1000)),
+    );
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -23,6 +39,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
         ),
       ),
       body: new ListView(children: <Widget>[
+        image_carousel,
         new Padding(
           //padding widget
           padding: const EdgeInsets.all(8.0),
@@ -38,36 +55,6 @@ class _OdrasliPageState extends State<OdrasliPage> {
         //horrizontal listview
         HorrizontalList(),
       ]),
-    );
-  }
-}
-
-//kategorije proizvoda
-class Categories extends StatefulWidget {
-  @override
-  _CategoriesState createState() => _CategoriesState();
-}
-
-class _CategoriesState extends State<Categories> {
-  List<String> categories = [
-    "Hrana",
-    "Pice",
-    "Zabava",
-    "Nargila",
-    "Dekoracija"
-  ];
-  int selectedIndex = 0; // prvi je uvek izabran po difoltu
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 25,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, index) => Text(
-          categories[index],
-        ),
-      ),
     );
   }
 }

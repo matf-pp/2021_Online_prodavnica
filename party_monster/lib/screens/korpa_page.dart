@@ -22,22 +22,36 @@ class _KorpaPageState extends State<KorpaPage> {
         ),
       ),
       bottomNavigationBar: new Container(
-          color: Colors.white,
+          color: Colors.black,
           child: Row(
             children: <Widget>[
               Expanded(
                   child: ListTile(
-                title: new Text("Ukupan iznos:"),
-                subtitle: new Text("cena"),
+                title: new Text(
+                  "Ukupan iznos:",
+                  style: TextStyle(color: Colors.white),
+                ),
+                subtitle: new Text(
+                  "cena",
+                  style: TextStyle(color: Colors.white),
+                ),
               )),
               Expanded(
-                child: new MaterialButton(
+                child: new TextButton(
                   onPressed: () {},
+                  style: ButtonStyle(
+                      padding: MaterialStateProperty.all<EdgeInsets>(
+                          EdgeInsets.all(15)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.red),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.red.shade900)))),
                   child: new Text(
                     "Placanje",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.white),
                   ),
-                  color: Colors.red.shade900,
                 ),
               )
             ],

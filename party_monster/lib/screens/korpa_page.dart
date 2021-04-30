@@ -41,7 +41,7 @@ class _KorpaPageState extends State<KorpaPage> {
                   onPressed: () {},
                   style: ButtonStyle(
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
+                          EdgeInsets.all(10)),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.red),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
-import 'package:party_monster/screens/izdvojeno_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/screens/odrasli_page.dart';
 

@@ -20,7 +20,7 @@ class HorrizontalList extends StatelessWidget {
               Icons.local_drink,
               size: 50.0,
             ),
-            opis: 'Pice',
+            opis: 'Piće',
           ),
           Category(
             ikonica: new Icon(

@@ -26,7 +26,13 @@ class _DecaPageState extends State<DecaPage> {
         new Padding(
           //padding widget
           padding: const EdgeInsets.all(8.0),
-          child: new Text("Kategorije"),
+          child: new Text(
+            "Kategorije:",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+            ),
+          ),
         ),
 
         //horrizontal listview

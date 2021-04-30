@@ -17,17 +17,31 @@ class HorrizontalList extends StatelessWidget {
           ),
           Category(
             ikonica: new Icon(
-              Icons.local_drink,
+              Icons.no_drinks,
               size: 50.0,
             ),
-            opis: 'Pice',
+            opis: 'Sokovi',
           ),
           Category(
             ikonica: new Icon(
-              Icons.star,
+              Icons.liquor,
               size: 50.0,
             ),
-            opis: 'Dekoracija',
+            opis: 'Alkohol',
+          ),
+          Category(
+            ikonica: new Icon(
+              Icons.smoking_rooms,
+              size: 50.0,
+            ),
+            opis: 'Nargila',
+          ),
+          Category(
+            ikonica: new Icon(
+              Icons.sports_esports,
+              size: 50.0,
+            ),
+            opis: 'Igre',
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 //Ovo je Odrasli page
 import 'package:flutter/material.dart';
+import 'package:party_monster/components/horrizontal_view_odrasli.dart';
 
 class OdrasliPage extends StatefulWidget {
   @override
@@ -21,20 +22,22 @@ class _OdrasliPageState extends State<OdrasliPage> {
                   colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
         ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
-        child: Center(
-          //Ovde ide sadrzaj strane
-          child: Text(
-            "Oprema za zurke za odrasle",
-            style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
+      body: new ListView(children: <Widget>[
+        new Padding(
+          //padding widget
+          padding: const EdgeInsets.all(8.0),
+          child: new Text(
+            "Kategorije:",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+            ),
           ),
         ),
-      ),
+
+        //horrizontal listview
+        HorrizontalList(),
+      ]),
     );
   }
 }

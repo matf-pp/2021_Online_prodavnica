@@ -1,5 +1,9 @@
 //Ovo je Korpa page
 import 'package:flutter/material.dart';
+import 'package:party_monster/cart.dart';
+import 'package:provider/provider.dart';
+import '../cart.dart';
+import '../widgets/cart_item.dart';
 
 class KorpaPage extends StatefulWidget {
   @override
@@ -9,10 +13,15 @@ class KorpaPage extends StatefulWidget {
 class _KorpaPageState extends State<KorpaPage> {
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context);
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Moja korpa'),
+        title: Text(
+          'Moja korpa',
+          style: TextStyle(fontSize: 20),
+        ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -21,54 +30,23 @@ class _KorpaPageState extends State<KorpaPage> {
                   colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
         ),
       ),
-      bottomNavigationBar: new Container(
-          color: Colors.black,
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                  child: ListTile(
-                title: new Text(
-                  "Ukupan iznos:",
-                  style: TextStyle(color: Colors.white),
-                ),
-                subtitle: new Text(
-                  "cena",
-                  style: TextStyle(color: Colors.white),
-                ),
-              )),
-              Expanded(
-                child: new TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(10)),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.red),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(color: Colors.red.shade900)))),
-                  child: new Text(
-                    "Placanje",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              )
-            ],
-          )),
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
-        child: Center(
-          //Ovde ide sadrzaj strane
-          child: Text(
-            "Ovde ce stajati proizvodi spremni za kupovinu.\n",
-            style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
-          ),
-        ),
+      body: Column(
+        children: <Widget>[
+          ListView.builder(
+              itemCount: cart.items.length,
+              itemBuilder: (context, i) => CartProduct(
+                  cart.items.values.toList()[i].id,
+                  cart.items.keys.toList()[i],
+                  cart.items.values.toList()[i].price,
+                  cart.items.values.toList()[i].quantity,
+                  cart.items.values.toList()[i].name)),
+          ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                "Naruči",
+                style: TextStyle(color: Colors.red.shade900, fontSize: 20),
+              ))
+        ],
       ),
     );
   }

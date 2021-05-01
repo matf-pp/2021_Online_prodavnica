@@ -18,10 +18,10 @@ class Item extends StatelessWidget {
               name,
               style: TextStyle(color: Colors.black.withOpacity(0.6)),
             ),
-            // subtitle: Text(
-            //   price.toString(),                                               //KAKO DA SE PRETVORI BROJ U TEXT???
-            //   style: TextStyle(color: Colors.black.withOpacity(1.2)),
-            // ),
+            subtitle: Text(
+              '$price', //KAKO DA SE PRETVORI BROJ U TEXT???
+              style: TextStyle(color: Colors.black.withOpacity(1.2)),
+            ),
             trailing: IconButton(
               icon: Icon(
                 Icons.shopping_bag_outlined,

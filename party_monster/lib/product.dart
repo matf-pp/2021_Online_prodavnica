@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Product {
+class Product with ChangeNotifier {
   final String id;
   final String category;
   final String name;
@@ -15,31 +15,66 @@ class Product {
       @required this.price});
 }
 
-class Products {
-  List<Product> items = [
+class Products with ChangeNotifier {
+  List<Product> _items = [
     Product(
       id: '1',
       category: 'Hrana',
       name: 'Smoki',
       imgUrl:
-          'https://www.google.com/search?q=smoki&client=ubuntu&hs=ZyZ&channel=fs&sxsrf=ALeKk03jFcDzcRfnOUkWnVFHTJbXhIq7RA:1619801383050&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj3_quwtqbwAhUrtYsKHRoDCkQQ_AUoAXoECAEQAw#imgrc=PA6EmZxfz_rqMM',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
       price: 35,
     ),
     Product(
-      id: '1',
+      id: '2',
+      category: 'Pice',
+      name: 'Sok',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
+      price: 100,
+    ),
+    Product(
+      id: '3',
       category: 'Hrana',
       name: 'Cips',
       imgUrl:
-          'https://www.google.com/search?q=smoki&client=ubuntu&hs=ZyZ&channel=fs&sxsrf=ALeKk03jFcDzcRfnOUkWnVFHTJbXhIq7RA:1619801383050&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj3_quwtqbwAhUrtYsKHRoDCkQQ_AUoAXoECAEQAw#imgrc=PA6EmZxfz_rqMM',
-      price: 35,
+          'https://lh3.googleusercontent.com/proxy/_iDPoKhb2Uf1M5MkECJ0Q7j9gcbGVlrdPZADsWtSlE-3ZElQNznQWBYJxFVrPJFegvClwVKZ_VwXkdXWrn2OZWW_KPw',
+      price: 60,
     ),
     Product(
-      id: '1',
-      category: 'Hrana',
-      name: 'Smoki',
+      id: '4',
+      category: 'Dekoracija',
+      name: 'Konfete',
       imgUrl:
-          'https://www.google.com/search?q=smoki&client=ubuntu&hs=ZyZ&channel=fs&sxsrf=ALeKk03jFcDzcRfnOUkWnVFHTJbXhIq7RA:1619801383050&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj3_quwtqbwAhUrtYsKHRoDCkQQ_AUoAXoECAEQAw#imgrc=PA6EmZxfz_rqMM',
-      price: 35,
+          'https://static.kupindoslike.com/KONFETE-Tuba-za-Ispaljivanje-30cm_slika_XL_98572399.jpg',
+      price: 500,
+    ),
+    Product(
+      id: '5',
+      category: 'Dekoracija',
+      name: 'Vatromet za tortu',
+      imgUrl:
+          'https://spmstamenkovic.com/wp-content/uploads/2017/04/vatromet-3modela-2-600x462.jpg',
+      price: 300,
+    ),
+    Product(
+      id: '6',
+      category: 'Hrana',
+      name: 'Grisini',
+      imgUrl: 'https://elakolije.rs/slike_pro/pro_v_1015670.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '7',
+      category: 'Pice',
+      name: 'Koka-kola',
+      imgUrl:
+          'https://shop.bastapromet.rs/images/2020/05/1590656316-cocacola2l528.jpg',
+      price: 120,
     ),
   ];
+
+  List<Product> get items {
+    return [..._items];
+  }
 }

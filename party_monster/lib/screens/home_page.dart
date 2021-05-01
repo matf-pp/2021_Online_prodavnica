@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   double yOffset = 0;
   double scaleFactor = 1;
   bool isDrawerOpen = false; //Da li je otvoren side meni
-  bool isNightMode = true; //Da li je nocni rezim aktiviran
+  // bool isNightMode = true; //Da li je nocni rezim aktiviran
   //TO DO- Treba da se dovrsi night Mode ili da se obrise ta opcija
   Color colorText = Colors.white;
   Color nightColor1 = Colors.blue.shade900;

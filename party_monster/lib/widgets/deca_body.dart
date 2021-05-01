@@ -36,7 +36,7 @@ class DecaBody extends StatelessWidget {
       imageCarousel,
       //horrizontal listview
       HorrizontalList(),
-      Container(height: 400, child: All_products())
+      Container(height: 400, child: AllProducts())
     ]);
   }
 }

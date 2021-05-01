@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import '../product.dart';
 import './Item.dart';
 
-class All_products extends StatelessWidget {
+class AllProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productData = Provider.of<Products>(context);

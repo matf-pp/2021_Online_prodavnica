@@ -11,7 +11,7 @@ class OdrasliPage extends StatefulWidget {
 class _OdrasliPageState extends State<OdrasliPage> {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = new Container(
+    Widget imageCarousel = new Container(
       height: 200.0,
       child: Carousel(
           boxFit: BoxFit.cover,
@@ -39,7 +39,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
         ),
       ),
       body: new ListView(children: <Widget>[
-        image_carousel,
+        imageCarousel,
         new Padding(
           //padding widget
           padding: const EdgeInsets.all(8.0),

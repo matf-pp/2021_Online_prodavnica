@@ -1,14 +1,8 @@
-//Ovo je Odrasli page
 import 'package:flutter/material.dart';
+import 'package:party_monster/components/horrizontal_view_odrasli.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:party_monster/widgets/odrasli_body.dart';
 
-class OdrasliPage extends StatefulWidget {
-  @override
-  _OdrasliPageState createState() => _OdrasliPageState();
-}
-
-class _OdrasliPageState extends State<OdrasliPage> {
+class OdrasliBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget imageCarousel = new Container(
@@ -26,21 +20,22 @@ class _OdrasliPageState extends State<OdrasliPage> {
           animationCurve: Curves.fastOutSlowIn,
           animationDuration: Duration(milliseconds: 1000)),
     );
-    return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('Odrasli '),
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: <Color>[
-                  Colors.blue.shade900,
-                  Colors.red.shade900
-                ])),
+    return new ListView(children: <Widget>[
+      imageCarousel,
+      new Padding(
+        //padding widget
+        padding: const EdgeInsets.all(8.0),
+        child: new Text(
+          "Kategorije:",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
           ),
         ),
-        body: OdrasliBody());
+      ),
+
+      //horrizontal listview
+      HorrizontalList(),
+    ]);
   }
 }

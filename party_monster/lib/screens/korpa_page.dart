@@ -32,18 +32,20 @@ class _KorpaPageState extends State<KorpaPage> {
       ),
       body: Column(
         children: <Widget>[
-          ListView.builder(
-              itemCount: cart.items.length,
-              itemBuilder: (context, i) => CartProduct(
-                  cart.items.values.toList()[i].id,
-                  cart.items.keys.toList()[i],
-                  cart.items.values.toList()[i].price,
-                  cart.items.values.toList()[i].quantity,
-                  cart.items.values.toList()[i].name)),
-          ElevatedButton(
+          Expanded(
+            child: ListView.builder(
+                itemCount: cart.items.length,
+                itemBuilder: (context, i) => CartProduct(
+                    cart.items.values.toList()[i].id,
+                    cart.items.keys.toList()[i],
+                    cart.items.values.toList()[i].price,
+                    cart.items.values.toList()[i].quantity,
+                    cart.items.values.toList()[i].name)),
+          ),
+          TextButton(
               onPressed: () {},
               child: Text(
-                "Naruči",
+                "PORUČI",
                 style: TextStyle(color: Colors.red.shade900, fontSize: 20),
               ))
         ],

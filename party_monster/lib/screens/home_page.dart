@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
                     icon: Icon(
                       Icons.menu,
                       color: colorText,
+                      size: 30,
                     ),
                     onPressed: () {
                       setState(() {
@@ -101,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(
                   Icons.shopping_bag_outlined,
                   color: colorText,
+                  size: 30,
                 ),
                 onPressed: () {
                   Navigator.push(

@@ -22,6 +22,7 @@ class DecaBody extends StatelessWidget {
           animationDuration: Duration(milliseconds: 1000)),
     );
     return new ListView(children: <Widget>[
+      imageCarousel,
       new Padding(
         //padding widget
         padding: const EdgeInsets.all(8.0),
@@ -33,7 +34,6 @@ class DecaBody extends StatelessWidget {
           ),
         ),
       ),
-      imageCarousel,
       //horrizontal listview
       HorrizontalList(),
       Container(height: 400, child: AllProducts())

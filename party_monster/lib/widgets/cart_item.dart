@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:party_monster/cart.dart';
+import 'package:provider/provider.dart';
 
 class CartProduct extends StatelessWidget {
   final String id;
@@ -11,14 +13,25 @@ class CartProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        child: ListTile(
-      leading: CircleAvatar(
-        child: FittedBox(child: Text('$price din')),
+    return Dismissible(
+      key: ValueKey(id),
+      direction: DismissDirection.endToStart,
+      background: Container(
+        color: Colors.red.shade900,
       ),
-      title: Text(name),
-      subtitle: Text("Ukupno:${(price * quantity)} rsd"),
-      trailing: Text("$quantity kom"),
-    ));
+      onDismissed: (direction) {
+        Provider.of<Cart>(context).removeItem(productId);
+      },
+      child: Card(
+        child: ListTile(
+          leading: CircleAvatar(
+            child: FittedBox(child: Text('$price din')),
+          ),
+          title: Text(name),
+          subtitle: Text("Ukupno: ${(price * quantity)} rsd"),
+          trailing: Text("$quantity kom"),
+        ),
+      ),
+    );
   }
 }

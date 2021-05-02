@@ -44,6 +44,8 @@ class _KorpaPageState extends State<KorpaPage> {
                     cart.items.values.toList()[i].quantity,
                     cart.items.values.toList()[i].name)),
           ),
+          CustomerInfo(),
+          FinalPrice(),
           CheckoutButton(cart: cart),
         ],
       ),
@@ -76,7 +78,76 @@ class _CheckoutButtonState extends State<CheckoutButton> {
           : () async {
               await Provider.of<Orders>(context, listen: false).addOrder(
                   widget.cart.items.values.toList(), widget.cart.totalAmount);
+              Scaffold.of(context).showSnackBar(SnackBar(
+                duration: Duration(seconds: 1),
+                content: Text(
+                  "Vasa porudzbina je uspesno prosledjena!",
+                  style: TextStyle(color: Colors.white),
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0)),
+                ),
+                elevation: 1.0,
+                backgroundColor: Colors.red.shade900,
+              ));
+              widget.cart.clear();
             },
+    );
+  }
+}
+
+class CustomerInfo extends StatefulWidget {
+  @override
+  _CustomerInfoState createState() => _CustomerInfoState();
+}
+
+class _CustomerInfoState extends State<CustomerInfo> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Ime i prezime: ',
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextFormField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Adresa i mesto: ',
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class FinalPrice extends StatefulWidget {
+  @override
+  _FinalPriceState createState() => _FinalPriceState();
+}
+
+class _FinalPriceState extends State<FinalPrice> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: Text(
+              'Vas racun je: Dostava za celu Srbiju iznosi 200 rsd, a za kupovine u iznosu od preko 3000 dostava je besplatna.'),
+        )
+      ],
     );
   }
 }

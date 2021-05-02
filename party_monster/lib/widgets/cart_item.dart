@@ -24,13 +24,10 @@ class CartProduct extends StatelessWidget {
       },
       child: Card(
         child: ListTile(
-          leading: CircleAvatar(
-            child: FittedBox(child: Text('$price din')),
-            backgroundColor: Colors.blue.shade300,
-          ),
+          leading: Icon(Icons.arrow_forward_ios),
           title: Text(name),
           subtitle: Text("Ukupno: ${(price * quantity)} rsd"),
-          trailing: Text("$quantity kom"),
+          trailing: Text("$price × $quantity"),
         ),
       ),
     );

@@ -15,6 +15,7 @@ class CartItem {
 
 class Cart with ChangeNotifier {
   Map<String, CartItem> _items = {};
+  int brojac = 0;
 
   Map<String, CartItem> get items {
     return {..._items};
@@ -25,6 +26,7 @@ class Cart with ChangeNotifier {
   }
 
   void addItem(String pid, String name, double price) {
+    brojac++;
     if (_items.containsKey(pid)) {
       _items.update(
           pid,
@@ -79,6 +81,7 @@ class Cart with ChangeNotifier {
 
   void clear() {
     _items = {};
+    brojac = 0;
     notifyListeners();
   }
 }

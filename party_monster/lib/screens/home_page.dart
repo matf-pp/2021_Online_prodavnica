@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/screens/odrasli_page.dart';
+import '../cart.dart';
+import 'package:badges/badges.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,6 +30,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context);
+    int pdtnumber = cart.brojac;
     return AnimatedContainer(
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
         ..scale(scaleFactor),
@@ -99,18 +104,24 @@ class _HomePageState extends State<HomePage> {
               // });
               // },
               // ),
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                  color: colorText,
-                  size: 30,
+              Badge(
+                badgeContent: Text('$pdtnumber',
+                    style: TextStyle(color: Colors.white, fontSize: 10)),
+                toAnimate: false,
+                position: BadgePosition.topEnd(top: 3, end: 3),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => KorpaPage()),
+                    );
+                  },
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => KorpaPage()),
-                  );
-                },
               ),
             ],
             centerTitle: true,

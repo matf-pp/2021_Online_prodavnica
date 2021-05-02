@@ -33,14 +33,14 @@ class Products with ChangeNotifier {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
       price: 100,
     ),
-    Product(
-      id: '3',
-      category: 'Hrana',
-      name: 'Cips',
-      imgUrl:
-          'https://lh3.googleusercontent.com/proxy/_iDPoKhb2Uf1M5MkECJ0Q7j9gcbGVlrdPZADsWtSlE-3ZElQNznQWBYJxFVrPJFegvClwVKZ_VwXkdXWrn2OZWW_KPw',
-      price: 60,
-    ),
+    // Product(
+    //   id: '3',
+    //   category: 'Hrana',
+    //   name: 'Cips',
+    //   imgUrl:
+    //       'https://lh3.googleusercontent.com/proxy/_iDPoKhb2Uf1M5MkECJ0Q7j9gcbGVlrdPZADsWtSlE-3ZElQNznQWBYJxFVrPJFegvClwVKZ_VwXkdXWrn2OZWW_KPw',
+    //   price: 60,
+    // ),
     Product(
       id: '4',
       category: 'Dekoracija',
@@ -52,7 +52,7 @@ class Products with ChangeNotifier {
     Product(
       id: '5',
       category: 'Dekoracija',
-      name: 'Vatromet za tortu',
+      name: 'Vatromet',
       imgUrl:
           'https://spmstamenkovic.com/wp-content/uploads/2017/04/vatromet-3modela-2-600x462.jpg',
       price: 300,

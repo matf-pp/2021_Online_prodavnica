@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:party_monster/cart.dart';
 import 'package:party_monster/orders.dart';
-import 'package:party_monster/product.dart';
+import 'package:party_monster/product_deca.dart';
 import 'package:party_monster/screens/landing_page.dart';
 import 'package:provider/provider.dart';
 

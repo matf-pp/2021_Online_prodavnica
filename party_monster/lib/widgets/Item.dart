@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/product.dart';
+import 'package:party_monster/product_deca.dart';
 import 'package:provider/provider.dart';
-import '../product.dart';
+import '../product_deca.dart';
 import '../cart.dart';
 
 class Item extends StatelessWidget {
@@ -21,13 +21,9 @@ class Item extends StatelessWidget {
           child: Image.network(imageUrl),
           footer: GridTileBar(
             title: Text(
-              name,
+              name + '\n' + '$price',
               style: TextStyle(color: Colors.black.withOpacity(0.6)),
             ),
-            // subtitle: Text(
-            //   "$price", //KAKO DA SE PRETVORI BROJ U TEXT???
-            //   style: TextStyle(color: Colors.black.withOpacity(1.2)),
-            // ),
             trailing: IconButton(
               icon: Icon(
                 Icons.add_shopping_cart,

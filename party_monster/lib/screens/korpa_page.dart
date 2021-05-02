@@ -77,10 +77,7 @@ class _CheckoutButtonState extends State<CheckoutButton> {
           ? null
           : () async {
               await Provider.of<Orders>(context, listen: false).addOrder(
-                  widget.cart.items.values.toList(),
-                  widget.cart.totalAmount,
-                  name,
-                  adresse);
+                  widget.cart.items.values.toList(), widget.cart.totalAmount);
               Scaffold.of(context).showSnackBar(SnackBar(
                 duration: Duration(seconds: 1),
                 content: Text(
@@ -107,8 +104,6 @@ class CustomerInfo extends StatefulWidget {
 }
 
 class _CustomerInfoState extends State<CustomerInfo> {
-  TextEditingController namecontroller = new TextEditingController();
-  TextEditingController adressecontroller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -117,7 +112,6 @@ class _CustomerInfoState extends State<CustomerInfo> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
-            controller: namecontroller,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Ime i prezime: ',
@@ -127,7 +121,6 @@ class _CustomerInfoState extends State<CustomerInfo> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextFormField(
-            controller: adressecontroller,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Adresa i mesto: ',
@@ -140,6 +133,8 @@ class _CustomerInfoState extends State<CustomerInfo> {
 }
 
 class FinalPrice extends StatefulWidget {
+  //final Cart cart;
+  //const FinalPrice({@required this.cart});
   @override
   _FinalPriceState createState() => _FinalPriceState();
 }
@@ -149,16 +144,16 @@ class _FinalPriceState extends State<FinalPrice> {
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
     final double price = cart.totalAmount;
-    double totalp = 0.0;
+    double total = 0.0;
     if (price > 0) {
-      totalp = price + 200.0;
+      total = price + 200.0;
     }
     return Column(
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(),
           child: Text(
-              'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $totalp rsd.'),
+              'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
         ),
       ],
     );

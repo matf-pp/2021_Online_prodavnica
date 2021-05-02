@@ -23,7 +23,8 @@ class Orders with ChangeNotifier {
     return [..._orders];
   }
 
-  Future<void> addOrder(List<CartItem> cartProducts, double total) async {
+  Future<void> addOrder(List<CartItem> cartProducts, double total, String name,
+      String adresse) async {
     final url = Uri.parse(
         'https://partymonster-ksm-default-rtdb.europe-west1.firebasedatabase.app/orders.json');
     final timeSramp = DateTime.now();
@@ -31,14 +32,16 @@ class Orders with ChangeNotifier {
       final response = await http.post(url,
           body: json.encode({
             'id': DateTime.now().toString(),
-            'amount': total,
-            'dateTime': timeSramp.toIso8601String(),
-            'products': cartProducts
+            'ime i prezime': name,
+            'adresa i mesto': adresse,
+            'iznos': total + 200.0,
+            'vreme': timeSramp.toIso8601String(),
+            'proizvodi': cartProducts
                 .map((cp) => {
                       'id': cp.id,
-                      'title': cp.name,
-                      'quantity': cp.quantity,
-                      'price': cp.price
+                      'naziv': cp.name,
+                      'kolicina': cp.quantity,
+                      'cena': cp.price
                     })
                 .toList()
           }));

@@ -26,6 +26,7 @@ class CartProduct extends StatelessWidget {
         child: ListTile(
           leading: CircleAvatar(
             child: FittedBox(child: Text('$price din')),
+            backgroundColor: Colors.blue.shade300,
           ),
           title: Text(name),
           subtitle: Text("Ukupno: ${(price * quantity)} rsd"),

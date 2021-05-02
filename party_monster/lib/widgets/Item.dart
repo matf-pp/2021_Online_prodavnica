@@ -30,7 +30,7 @@ class Item extends StatelessWidget {
             // ),
             trailing: IconButton(
               icon: Icon(
-                Icons.shopping_bag_outlined,
+                Icons.shopping_cart,
                 color: Colors.grey,
               ),
               onPressed: () {
@@ -38,7 +38,7 @@ class Item extends StatelessWidget {
                   duration: Duration(seconds: 1),
                   content: Text(
                     "Dodato u korpu!",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.white),
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -46,7 +46,7 @@ class Item extends StatelessWidget {
                         topRight: Radius.circular(16.0)),
                   ),
                   elevation: 1.0,
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.red.shade900,
                 ));
                 cart.addItem(pdt.id, pdt.name, pdt.price);
               },

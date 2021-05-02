@@ -1,4 +1,5 @@
-//Ovo je Odrasli page
+// Ovo je Odrasli Page
+
 import 'package:flutter/material.dart';
 import 'package:party_monster/widgets/odrasli_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
@@ -28,7 +29,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
             actions: <Widget>[
               IconButton(
                 icon: Icon(
-                  Icons.shopping_bag_outlined,
+                  Icons.shopping_cart,
                   color: Colors.white,
                   size: 30,
                 ),

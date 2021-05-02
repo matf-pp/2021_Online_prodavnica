@@ -1,4 +1,5 @@
 //Ovo je Home Page
+
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
               // ),
               IconButton(
                 icon: Icon(
-                  Icons.shopping_bag_outlined,
+                  Icons.shopping_cart,
                   color: colorText,
                   size: 30,
                 ),
@@ -145,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                         child: Image.asset(
                           'assets/adultsParty.jpg',
                           fit: BoxFit.cover,
-                          height: 350,
+                          height: 380,
                         ),
                       ),
                     ),
@@ -163,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                         child: Image.asset(
                           'assets/kidsParty.jpg',
                           fit: BoxFit.cover,
-                          height: 350,
+                          height: 380,
                         ),
                       ),
                     ),

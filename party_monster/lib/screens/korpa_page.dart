@@ -1,6 +1,8 @@
 //Ovo je Korpa page
+
 import 'package:flutter/material.dart';
 import 'package:party_monster/cart.dart';
+import 'package:party_monster/orders.dart';
 import 'package:provider/provider.dart';
 import '../cart.dart';
 import '../widgets/cart_item.dart';
@@ -42,14 +44,39 @@ class _KorpaPageState extends State<KorpaPage> {
                     cart.items.values.toList()[i].quantity,
                     cart.items.values.toList()[i].name)),
           ),
-          TextButton(
-              onPressed: () {},
-              child: Text(
-                "PORUČI",
-                style: TextStyle(color: Colors.red.shade900, fontSize: 20),
-              ))
+          CheckoutButton(cart: cart),
         ],
       ),
+    );
+  }
+}
+
+class CheckoutButton extends StatefulWidget {
+  final Cart cart;
+  const CheckoutButton({@required this.cart});
+  @override
+  _CheckoutButtonState createState() => _CheckoutButtonState();
+}
+
+class _CheckoutButtonState extends State<CheckoutButton> {
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: BorderSide(color: Colors.red.shade900)),
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+      child: Text("     PORUCI     ",
+          style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
+      onPressed: widget.cart.totalAmount <= 0
+          ? null
+          : () async {
+              await Provider.of<Orders>(context, listen: false).addOrder(
+                  widget.cart.items.values.toList(), widget.cart.totalAmount);
+            },
     );
   }
 }

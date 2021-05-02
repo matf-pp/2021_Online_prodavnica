@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:party_monster/cart.dart';
+import 'package:party_monster/orders.dart';
 import 'package:party_monster/product.dart';
 import 'package:party_monster/screens/landing_page.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +12,12 @@ void main() {
       providers: [
         ChangeNotifierProvider.value(
           value: Products(),
+        ),
+        // ChangeNotifierProvider.value(
+        //   value: Product(),
+        // ),
+        ChangeNotifierProvider.value(
+          value: Orders(),
         ),
         ChangeNotifierProvider.value(
           value: Cart(),

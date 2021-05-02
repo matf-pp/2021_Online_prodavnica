@@ -1,3 +1,5 @@
+// Ovo je Drawer Screen
+
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
@@ -25,7 +27,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
           Text(
             'PartyMonster',
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 55),
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 50),
           ),
           Column(children: [
             TextButton(
@@ -38,7 +40,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.sports_bar_rounded,
+                    Icons.people,
                     color: Colors.white,
                     size: 40,
                   ),
@@ -65,7 +67,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.sports_esports_rounded,
+                    Icons.child_care,
                     color: Colors.white,
                     size: 40,
                   ),
@@ -119,7 +121,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.shopping_cart_rounded,
+                    Icons.shopping_cart,
                     color: Colors.white,
                     size: 40,
                   ),

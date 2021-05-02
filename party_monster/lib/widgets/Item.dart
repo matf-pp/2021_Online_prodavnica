@@ -30,7 +30,7 @@ class Item extends StatelessWidget {
             // ),
             trailing: IconButton(
               icon: Icon(
-                Icons.shopping_cart,
+                Icons.add_shopping_cart,
                 color: Colors.grey,
               ),
               onPressed: () {

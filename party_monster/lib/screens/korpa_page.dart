@@ -133,6 +133,8 @@ class _CustomerInfoState extends State<CustomerInfo> {
 }
 
 class FinalPrice extends StatefulWidget {
+  //final Cart cart;
+  //const FinalPrice({@required this.cart});
   @override
   _FinalPriceState createState() => _FinalPriceState();
 }
@@ -140,13 +142,19 @@ class FinalPrice extends StatefulWidget {
 class _FinalPriceState extends State<FinalPrice> {
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context);
+    final double price = cart.totalAmount;
+    double total = 0.0;
+    if (price > 0) {
+      total = price + 200.0;
+    }
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          padding: EdgeInsets.symmetric(),
           child: Text(
-              'Vas racun je: Dostava za celu Srbiju iznosi 200 rsd, a za kupovine u iznosu od preko 3000 dostava je besplatna.'),
-        )
+              'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
+        ),
       ],
     );
   }

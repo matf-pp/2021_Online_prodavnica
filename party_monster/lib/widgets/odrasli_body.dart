@@ -34,6 +34,7 @@ class OdrasliBody extends StatelessWidget {
           ),
         ),
       ),
+      HorrizontalList(),
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(
@@ -44,7 +45,6 @@ class OdrasliBody extends StatelessWidget {
           ),
         ),
       ),
-      HorrizontalList(),
       Container(height: 400, child: IzdvajamoOdrasliProducts()),
     ]);
   }

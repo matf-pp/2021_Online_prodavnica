@@ -50,6 +50,6 @@ class _NargilaPageState extends State<NargilaPage> {
                 ),
               ),
             ]),
-        body: Container(height: 400, child: NargilaProducts()));
+        body: ListView(children: <Widget>[NargilaProducts()]));
   }
 }

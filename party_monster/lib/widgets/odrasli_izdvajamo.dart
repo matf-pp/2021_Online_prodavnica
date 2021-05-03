@@ -11,7 +11,14 @@ class IzdvajamoOdrasliProducts extends StatelessWidget {
     final productData = Provider.of<Products>(context);
     final pdts = productData.items;
     for (var i = 0; i < pdts.length; i++) {
-      if (pdts[i].id == '1' || pdts[i].id == '11') {
+      if (pdts[i].id == '3' ||
+          pdts[i].id == '62' ||
+          pdts[i].id == '12' ||
+          pdts[i].id == '11' ||
+          pdts[i].id == '57' ||
+          pdts[i].id == '58' ||
+          pdts[i].id == '40' ||
+          pdts[i].id == '44') {
         izdvajamo_odrasli.add(pdts[i]);
       }
     }

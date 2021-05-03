@@ -15,8 +15,14 @@ class KorpaPage extends StatefulWidget {
 class _KorpaPageState extends State<KorpaPage> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController namecontroller = TextEditingController();
+    TextEditingController adressecontroller = TextEditingController();
     final cart = Provider.of<Cart>(context);
-
+    final double price = cart.totalAmount;
+    double total = 0.0;
+    if (price > 0) {
+      total = price + 200.0;
+    }
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -44,118 +50,181 @@ class _KorpaPageState extends State<KorpaPage> {
                     cart.items.values.toList()[i].quantity,
                     cart.items.values.toList()[i].name)),
           ),
-          CustomerInfo(),
-          FinalPrice(),
-          CheckoutButton(cart: cart),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: TextField(
+              controller: namecontroller,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Ime i prezime:',
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: TextFormField(
+              controller: adressecontroller,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Adresa i mesto:',
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(),
+            child: Text(
+                'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
+          ),
+          TextButton(
+            style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.red.shade900)),
+                ),
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Colors.white)),
+            child: Text("     PORUCI     ",
+                style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
+            onPressed: cart.totalAmount <= 0.0
+                ? null
+                : () async {
+                    String name = namecontroller.text;
+                    String adresse = adressecontroller.text;
+                    namecontroller.clear();
+                    adressecontroller.clear();
+                    await Provider.of<Orders>(context, listen: false).addOrder(
+                        cart.items.values.toList(),
+                        cart.totalAmount,
+                        name,
+                        adresse);
+                    Scaffold.of(context).showSnackBar(SnackBar(
+                      duration: Duration(seconds: 1),
+                      content: Text(
+                        "Vasa porudzbina je uspesno prosledjena!",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16.0),
+                            topRight: Radius.circular(16.0)),
+                      ),
+                      elevation: 1.0,
+                      backgroundColor: Colors.red.shade900,
+                    ));
+                    cart.clear();
+                  },
+          ),
         ],
       ),
     );
   }
 }
 
-class CheckoutButton extends StatefulWidget {
-  final Cart cart;
-  const CheckoutButton({@required this.cart});
-  @override
-  _CheckoutButtonState createState() => _CheckoutButtonState();
-}
+// class CheckoutButton extends StatefulWidget {
+//   final Cart cart;
+//   const CheckoutButton({@required this.cart});
+//   @override
+//   _CheckoutButtonState createState() => _CheckoutButtonState();
+// }
 
-class _CheckoutButtonState extends State<CheckoutButton> {
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-                side: BorderSide(color: Colors.red.shade900)),
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
-      child: Text("     PORUCI     ",
-          style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
-      onPressed: widget.cart.totalAmount <= 0
-          ? null
-          : () async {
-              await Provider.of<Orders>(context, listen: false).addOrder(
-                  widget.cart.items.values.toList(), widget.cart.totalAmount);
-              Scaffold.of(context).showSnackBar(SnackBar(
-                duration: Duration(seconds: 1),
-                content: Text(
-                  "Vasa porudzbina je uspesno prosledjena!",
-                  style: TextStyle(color: Colors.white),
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16.0),
-                      topRight: Radius.circular(16.0)),
-                ),
-                elevation: 1.0,
-                backgroundColor: Colors.red.shade900,
-              ));
-              widget.cart.clear();
-            },
-    );
-  }
-}
+// class _CheckoutButtonState extends State<CheckoutButton> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return TextButton(
+//       style: ButtonStyle(
+//           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+//             RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(18.0),
+//                 side: BorderSide(color: Colors.red.shade900)),
+//           ),
+//           backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+//       child: Text("     PORUCI     ",
+//           style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
+//       onPressed: widget.cart.totalAmount <= 0
+//           ? null
+//           : () async {
+//               await Provider.of<Orders>(context, listen: false).addOrder(
+//                   widget.cart.items.values.toList(),
+//                   widget.cart.totalAmount,
+//                   name,
+//                   adresse);
+//               Scaffold.of(context).showSnackBar(SnackBar(
+//                 duration: Duration(seconds: 1),
+//                 content: Text(
+//                   "Vasa porudzbina je uspesno prosledjena!",
+//                   style: TextStyle(color: Colors.white),
+//                 ),
+//                 shape: RoundedRectangleBorder(
+//                   borderRadius: BorderRadius.only(
+//                       topLeft: Radius.circular(16.0),
+//                       topRight: Radius.circular(16.0)),
+//                 ),
+//                 elevation: 1.0,
+//                 backgroundColor: Colors.red.shade900,
+//               ));
+//               widget.cart.clear();
+//             },
+//     );
+//   }
+// }
 
-class CustomerInfo extends StatefulWidget {
-  @override
-  _CustomerInfoState createState() => _CustomerInfoState();
-}
+// class CustomerInfo extends StatefulWidget {
+//   @override
+//   _CustomerInfoState createState() => _CustomerInfoState();
+// }
 
-class _CustomerInfoState extends State<CustomerInfo> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Ime i prezime: ',
-            ),
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextFormField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Adresa i mesto: ',
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
+// class _CustomerInfoState extends State<CustomerInfo> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: <Widget>[
+//         Padding(
+//           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+//           child: TextField(
+//             decoration: InputDecoration(
+//               border: OutlineInputBorder(),
+//               labelText: 'Ime i prezime:',
+//             ),
+//           ),
+//         ),
+//         Padding(
+//           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+//           child: TextFormField(
+//             decoration: InputDecoration(
+//               border: OutlineInputBorder(),
+//               labelText: 'Adresa i mesto:',
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
 
-class FinalPrice extends StatefulWidget {
-  //final Cart cart;
-  //const FinalPrice({@required this.cart});
-  @override
-  _FinalPriceState createState() => _FinalPriceState();
-}
+// class FinalPrice extends StatefulWidget {
+//   @override
+//   _FinalPriceState createState() => _FinalPriceState();
+// }
 
-class _FinalPriceState extends State<FinalPrice> {
-  @override
-  Widget build(BuildContext context) {
-    final cart = Provider.of<Cart>(context);
-    final double price = cart.totalAmount;
-    double total = 0.0;
-    if (price > 0) {
-      total = price + 200.0;
-    }
-    return Column(
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.symmetric(),
-          child: Text(
-              'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
-        ),
-      ],
-    );
-  }
-}
+// class _FinalPriceState extends State<FinalPrice> {
+//   @override
+//   Widget build(BuildContext context) {
+//     final cart = Provider.of<Cart>(context);
+//     final double price = cart.totalAmount;
+//     double total = 0.0;
+//     if (price > 0) {
+//       total = price + 200.0;
+//     }
+//     return Column(
+//       children: <Widget>[
+//         Padding(
+//           padding: EdgeInsets.symmetric(),
+//           child: Text(
+//               'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
+//         ),
+//       ],
+//     );
+//   }
+// }

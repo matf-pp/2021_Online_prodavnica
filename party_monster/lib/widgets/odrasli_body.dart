@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/components/horrizontal_view_odrasli.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import '../widgets/all_products_odrasli.dart';
 
 class OdrasliBody extends StatelessWidget {
   @override
@@ -36,6 +37,7 @@ class OdrasliBody extends StatelessWidget {
 
       //horrizontal listview
       HorrizontalList(),
+      Container(height: 400, child: AllProductsOdrasli()),
     ]);
   }
 }

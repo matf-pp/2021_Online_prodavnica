@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 
-class Product with ChangeNotifier {
+class ProductO with ChangeNotifier {
   final String id;
   final String category;
   final String name;
   final String imgUrl;
   final double price;
 
-  Product(
+  ProductO(
       {@required this.id,
       @required this.category,
       @required this.name,
@@ -15,9 +15,9 @@ class Product with ChangeNotifier {
       @required this.price});
 }
 
-class Products with ChangeNotifier {
-  List<Product> _items = [
-    Product(
+class ProductsO with ChangeNotifier {
+  List<ProductO> _items = [
+    ProductO(
       id: '1',
       category: 'Hrana',
       name: 'Tortilja',
@@ -25,7 +25,7 @@ class Products with ChangeNotifier {
           'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/hc2/h22/8904194523166.png',
       price: 70,
     ),
-    Product(
+    ProductO(
       id: '2',
       category: 'Nargila',
       name: 'Jagoda',
@@ -33,7 +33,7 @@ class Products with ChangeNotifier {
           'https://lh3.googleusercontent.com/proxy/bvZxGs8kpPjat8bSgDpzJB9OQB3033sQqgBo7EBSEofS2K3V-T-zEC1GirOQZWpUPrAArfWhqgAJ0VafJusrvrMnoOkYi7VBjWkVcXR1OUJ6Wt-b_c-RJziI9bTbnw',
       price: 100,
     ),
-    Product(
+    ProductO(
       id: '3',
       category: 'Nargila',
       name: 'nargila',
@@ -41,7 +41,7 @@ class Products with ChangeNotifier {
           'https://umbrellashop.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/008254.jpg',
       price: 60,
     ),
-    Product(
+    ProductO(
       id: '4',
       category: 'Alkohol',
       name: 'Dzin',
@@ -49,7 +49,7 @@ class Products with ChangeNotifier {
           'https://cenoteka.rs/assets/images/articles/dzin-gordons-0-7l-1003420-large.jpg',
       price: 500,
     ),
-    Product(
+    ProductO(
       id: '5',
       category: 'Pice',
       name: 'Tonik',
@@ -57,7 +57,7 @@ class Products with ChangeNotifier {
           'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/hb5/h01/8850339233822.png',
       price: 300,
     ),
-    Product(
+    ProductO(
       id: '6',
       category: 'Hrana',
       name: 'Kokice',
@@ -65,7 +65,7 @@ class Products with ChangeNotifier {
           'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
       price: 150,
     ),
-    Product(
+    ProductO(
       id: '7',
       category: 'Pice',
       name: 'Koka-kola',
@@ -73,14 +73,14 @@ class Products with ChangeNotifier {
           'https://shop.bastapromet.rs/images/2020/05/1590656316-cocacola2l528.jpg',
       price: 120,
     ),
-    Product(
+    ProductO(
       id: '8',
       category: 'Nargila',
       name: 'Menta',
       imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
       price: 65,
     ),
-    Product(
+    ProductO(
       id: '9',
       category: 'Pice',
       name: 'Vodtka',
@@ -88,7 +88,7 @@ class Products with ChangeNotifier {
           'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h81/h92/8896408748062.jpg',
       price: 1200,
     ),
-    Product(
+    ProductO(
       id: '10',
       category: 'Bezalkoholno',
       name: 'Voda',
@@ -98,7 +98,7 @@ class Products with ChangeNotifier {
     ),
   ];
 
-  List<Product> get items {
+  List<ProductO> get items {
     return [..._items];
   }
 }

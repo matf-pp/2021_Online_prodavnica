@@ -6,6 +6,8 @@ import 'package:party_monster/orders.dart';
 import 'package:provider/provider.dart';
 import '../cart.dart';
 import '../widgets/cart_item.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 
 class KorpaPage extends StatefulWidget {
   @override
@@ -80,19 +82,39 @@ class _KorpaPageState extends State<KorpaPage> {
           Container(
             height: 50.0,
             margin: EdgeInsets.all(10),
+            // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: cart.totalAmount <= 0.0
                   ? null
                   : () async {
                       String name = namecontroller.text;
                       String adresse = adressecontroller.text;
+                      String tekst =
+                          "<h1>Porudzbina</h1>\n<p><b>Ime i prezime: </b> " +
+                              name +
+                              "</p><p><b>Adresa: </b>" +
+                              adresse +
+                              "</p><p><b>Poruceni proizvodi:</b></p><p>";
+
+                      cart.items.values.toList().forEach((element) => tekst =
+                          tekst +
+                              element.quantity.toString() +
+                              'X ' +
+                              element.name +
+                              '</p><p>');
+                      tekst = tekst +
+                          'Ukupno za uplatu: <b>' +
+                          (cart.totalAmount).toString() +
+                          '</b></p>';
+                      sendMail(tekst);
                       namecontroller.clear();
                       adressecontroller.clear();
-                      cart.clear();
 
                       await Provider.of<Orders>(context, listen: false)
                           .addOrder(cart.items.values.toList(),
                               cart.totalAmount, name, adresse);
+
+                      cart.clear();
                     },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
@@ -123,112 +145,30 @@ class _KorpaPageState extends State<KorpaPage> {
       ),
     );
   }
+
+  sendMail(String tekst) async {
+    String username = 'hsmpartymonster@gmail.com';
+    String password = 'partymonsterhsm';
+
+    // ignore: deprecated_member_use
+    final smtpServer = gmail(username, password);
+    final message = Message()
+      ..from = Address(username)
+      ..recipients.add('mildim999@gmail.com')
+      ..recipients.add('Hristina.nik.pi@gmail.com')
+      ..recipients.add('sarazivkovic99@gmail.com')
+      ..subject = 'Imate novu porudzbinu na PartyMonster'
+      ..text = 'Porudzbina'
+      ..html = tekst;
+
+    try {
+      final sendReport = await send(message, smtpServer);
+      print('Message sent: ' + sendReport.toString());
+    } on MailerException catch (e) {
+      print('Message not sent.');
+      for (var p in e.problems) {
+        print('Problem: ${p.code}: ${p.msg}');
+      }
+    }
+  }
 }
-
-// class CheckoutButton extends StatefulWidget {
-//   final Cart cart;
-//   const CheckoutButton({@required this.cart});
-//   @override
-//   _CheckoutButtonState createState() => _CheckoutButtonState();
-// }
-
-// class _CheckoutButtonState extends State<CheckoutButton> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return TextButton(
-//       style: ButtonStyle(
-//           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-//             RoundedRectangleBorder(
-//                 borderRadius: BorderRadius.circular(18.0),
-//                 side: BorderSide(color: Colors.red.shade900)),
-//           ),
-//           backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
-//       child: Text("     PORUCI     ",
-//           style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
-//       onPressed: widget.cart.totalAmount <= 0
-//           ? null
-//           : () async {
-//               await Provider.of<Orders>(context, listen: false).addOrder(
-//                   widget.cart.items.values.toList(),
-//                   widget.cart.totalAmount,
-//                   name,
-//                   adresse);
-//               Scaffold.of(context).showSnackBar(SnackBar(
-//                 duration: Duration(seconds: 1),
-//                 content: Text(
-//                   "Vasa porudzbina je uspesno prosledjena!",
-//                   style: TextStyle(color: Colors.white),
-//                 ),
-//                 shape: RoundedRectangleBorder(
-//                   borderRadius: BorderRadius.only(
-//                       topLeft: Radius.circular(16.0),
-//                       topRight: Radius.circular(16.0)),
-//                 ),
-//                 elevation: 1.0,
-//                 backgroundColor: Colors.red.shade900,
-//               ));
-//               widget.cart.clear();
-//             },
-//     );
-//   }
-// }
-
-// class CustomerInfo extends StatefulWidget {
-//   @override
-//   _CustomerInfoState createState() => _CustomerInfoState();
-// }
-
-// class _CustomerInfoState extends State<CustomerInfo> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: <Widget>[
-//         Padding(
-//           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-//           child: TextField(
-//             decoration: InputDecoration(
-//               border: OutlineInputBorder(),
-//               labelText: 'Ime i prezime:',
-//             ),
-//           ),
-//         ),
-//         Padding(
-//           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-//           child: TextFormField(
-//             decoration: InputDecoration(
-//               border: OutlineInputBorder(),
-//               labelText: 'Adresa i mesto:',
-//             ),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
-
-// class FinalPrice extends StatefulWidget {
-//   @override
-//   _FinalPriceState createState() => _FinalPriceState();
-// }
-
-// class _FinalPriceState extends State<FinalPrice> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final cart = Provider.of<Cart>(context);
-//     final double price = cart.totalAmount;
-//     double total = 0.0;
-//     if (price > 0) {
-//       total = price + 200.0;
-//     }
-//     return Column(
-//       children: <Widget>[
-//         Padding(
-//           padding: EdgeInsets.symmetric(),
-//           child: Text(
-//               'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
-//         ),
-//       ],
-//     );
-//   }
-// }

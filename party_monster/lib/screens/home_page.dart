@@ -31,9 +31,6 @@ class _HomePageState extends State<HomePage> {
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
         ..scale(scaleFactor),
       duration: Duration(milliseconds: 250),
-      decoration: BoxDecoration(
-          borderRadius:
-              BorderRadius.circular(50)), //Ovo nece da mi radiiii-----------!
       child: ClipRRect(
         //Ovo sluzi da se zaoble ivice glavnom ekranu kad se otvori drawer
         borderRadius: BorderRadius.circular(isDrawerOpen ? 50.0 : 0.0),

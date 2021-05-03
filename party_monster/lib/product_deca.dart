@@ -194,9 +194,9 @@ class Products with ChangeNotifier {
     Product(
       id: '23',
       category: 'Hrana',
-      name: 'Jaffa',
+      name: 'TUC',
       imgUrl:
-          'https://www.tablicakalorija.com/wp-content/uploads/2017/10/jaffa-keks-730x430.jpg',
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h41/h36/8830542413854.png',
       price: 80,
     ),
     Product(
@@ -368,70 +368,77 @@ class Products with ChangeNotifier {
       id: '45',
       category: 'Igre',
       name: 'UNO',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl: 'https://www.dexy.co.rs/files/images/slike_proizvoda/OW2085.jpg',
       price: 300,
     ),
     Product(
       id: '46',
       category: 'Igre',
       name: 'UNO spin',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl: 'https://www.vrabac.co.rs/wp-content/uploads/2020/12/3157810.jpg',
       price: 1200,
     ),
     Product(
       id: '47',
       category: 'Igre',
       name: 'Kapital',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl: 'https://trijumfkids.rs/wp-content/uploads/2020/11/7.png',
       price: 900,
     ),
     Product(
       id: '48',
       category: 'Alkohol',
       name: 'Tekila',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/tekila-agavita-blanco-700ml-1005597-large.jpg',
       price: 1400,
     ),
     Product(
       id: '49',
       category: 'Alkohol',
       name: 'Stella',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h61/h66/8879948627998.png',
       price: 110,
     ),
     Product(
       id: '50',
       category: 'Alkohol',
       name: 'Jelen',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://www.ediskont.rs/uploads/store/products/images/jelen-pivo-05-u-limenci-u-paketu-od-24-komada-602fe10ddb475.jpg',
       price: 60,
     ),
     Product(
       id: '51',
       category: 'Alkohol',
       name: 'Lav',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h56/hfc/8843584798750.png',
       price: 60,
     ),
     Product(
       id: '52',
       category: 'Alkohol',
       name: 'Rose',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://www.ediskont.rs/uploads/store/products/images/moje_vino_roze_plantaze_1l_549.jpg',
       price: 400,
     ),
     Product(
       id: '53',
       category: 'Alkohol',
       name: 'Crveno vino',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/crveno-vino-plantaze-moje-vino-1l-1005848-large.jpg',
       price: 350,
     ),
     Product(
       id: '54',
       category: 'Alkohol',
       name: 'Belo vino',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/belo-vino-plantaze-moje-vino-1l-1005847-large.jpg',
       price: 350,
     ),
     Product(
@@ -439,7 +446,7 @@ class Products with ChangeNotifier {
       category: 'Dekoracija',
       name: 'Case',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+          'https://cdn.shopify.com/s/files/1/1901/3435/products/9100cp-caspari-happy-birthday-paper-cups-8-per-package-4818964807727.jpg?v=1570140983',
       price: 250,
     ),
     Product(
@@ -447,7 +454,7 @@ class Products with ChangeNotifier {
       category: 'Alkohol',
       name: 'Vinjak',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+          'https://cenoteka.rs/assets/images/articles/vinjak-rubin-1l-1004379-medium.jpg',
       price: 1000,
     ),
     Product(
@@ -455,36 +462,80 @@ class Products with ChangeNotifier {
       category: 'Sokovi',
       name: 'Kisela voda',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
+          'https://cenoteka.rs/assets/images/articles/gazirana-voda-knjaz-milos-1-75l-1000048-large.jpg',
       price: 45,
     ),
     Product(
       id: '58',
-      category: 'Nargila',
-      name: 'Kafa',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 500,
+      category: 'Alkohol',
+      name: 'Viski',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/viski-ballantines-kutija-0-7l-1004382-large.jpg',
+      price: 1200,
     ),
     Product(
       id: '59',
       category: 'Nargila',
-      name: 'Kafa',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      name: 'Vanila',
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008113.jpg',
       price: 500,
     ),
     Product(
       id: '60',
-      category: 'Nargila',
-      name: 'Kafa',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 500,
+      category: 'Hrana',
+      name: 'Ribice',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/ribice-bambi-ribice-jos-90g-1004856-large.jpg',
+      price: 70,
     ),
     Product(
       id: '61',
-      category: 'Nargila',
-      name: 'Aparatura',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 500,
+      category: 'Hrana',
+      name: 'Perece',
+      imgUrl:
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h38/hfd/8886492364830.png',
+      price: 70,
+    ),
+    Product(
+      id: '62',
+      category: 'Hrana',
+      name: 'Jaffa',
+      imgUrl:
+          'https://www.tablicakalorija.com/wp-content/uploads/2017/10/jaffa-keks-730x430.jpg',
+      price: 80,
+    ),
+    Product(
+      id: '63',
+      category: 'Hrana',
+      name: 'Noblice',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/biskvit-banini-noblice-125g-1000989-large.jpg',
+      price: 85,
+    ),
+    Product(
+      id: '64',
+      category: 'Hrana',
+      name: 'Tutku',
+      imgUrl:
+          'https://cenoteka.rs/assets/images/articles/keks-tutku-140g-1010492-large.jpg',
+      price: 120,
+    ),
+    Product(
+      id: '65',
+      category: 'Alkohol',
+      name: 'Šljiva',
+      imgUrl:
+          'https://www.kovoli.com/dev/wp-content/uploads/2017/05/rakija-sljiva-bogdanovic-686x686.jpg',
+      price: 900,
+    ),
+    Product(
+      id: '66',
+      category: 'Hrana',
+      name: 'Plazma',
+      imgUrl:
+          'https://www.ideaonline.me/images/products/440/440001188_1l.jpg?1554132047',
+      price: 130,
     ),
   ];
 

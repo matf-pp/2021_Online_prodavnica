@@ -20,8 +20,10 @@ class _KorpaPageState extends State<KorpaPage> {
     final cart = Provider.of<Cart>(context);
     final double price = cart.totalAmount;
     double total = 0.0;
-    if (price > 0) {
+    if (price > 0 && price < 3000) {
       total = price + 200.0;
+    } else {
+      total = price;
     }
     return Scaffold(
       appBar: AppBar(
@@ -73,47 +75,49 @@ class _KorpaPageState extends State<KorpaPage> {
           Padding(
             padding: EdgeInsets.symmetric(),
             child: Text(
-                'Dostava za celu Srbiju iznosi 200 rsd. \nVas racun je: $total rsd.'),
+                'Dostava za celu Srbiju iznosi 200 rsd.\nZa porudzbine preko 3000 rsd dostava je besplatna. \nVas racun je: $total rsd.'),
           ),
-          TextButton(
-            style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Colors.red.shade900)),
+          Container(
+            height: 50.0,
+            margin: EdgeInsets.all(10),
+            child: RaisedButton(
+              onPressed: cart.totalAmount <= 0.0
+                  ? null
+                  : () async {
+                      String name = namecontroller.text;
+                      String adresse = adressecontroller.text;
+                      namecontroller.clear();
+                      adressecontroller.clear();
+                      cart.clear();
+
+                      await Provider.of<Orders>(context, listen: false)
+                          .addOrder(cart.items.values.toList(),
+                              cart.totalAmount, name, adresse);
+                    },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Ink(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: <Color>[
+                          Colors.blue.shade900,
+                          Colors.red.shade900
+                        ]),
+                    borderRadius: BorderRadius.circular(30.0)),
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "PORUCI",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
                 ),
-                backgroundColor:
-                    MaterialStateProperty.all<Color>(Colors.white)),
-            child: Text("     PORUCI     ",
-                style: TextStyle(color: Colors.red.shade900, fontSize: 20)),
-            onPressed: cart.totalAmount <= 0.0
-                ? null
-                : () async {
-                    String name = namecontroller.text;
-                    String adresse = adressecontroller.text;
-                    namecontroller.clear();
-                    adressecontroller.clear();
-                    await Provider.of<Orders>(context, listen: false).addOrder(
-                        cart.items.values.toList(),
-                        cart.totalAmount,
-                        name,
-                        adresse);
-                    Scaffold.of(context).showSnackBar(SnackBar(
-                      duration: Duration(seconds: 1),
-                      content: Text(
-                        "Vasa porudzbina je uspesno prosledjena!",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(16.0),
-                            topRight: Radius.circular(16.0)),
-                      ),
-                      elevation: 1.0,
-                      backgroundColor: Colors.red.shade900,
-                    ));
-                    cart.clear();
-                  },
+              ),
+            ),
           ),
         ],
       ),

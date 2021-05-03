@@ -6,6 +6,7 @@ import './Item.dart';
 class IzdvajamoOdrasliProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     List<Product> izdvajamo_odrasli = [];
     final productData = Provider.of<Products>(context);
     final pdts = productData.items;

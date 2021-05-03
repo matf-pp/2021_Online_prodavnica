@@ -50,6 +50,7 @@ class Cart with ChangeNotifier {
   }
 
   void removeItem(String id) {
+    brojac -= _items[id].quantity;
     _items.remove(id);
     notifyListeners();
   }

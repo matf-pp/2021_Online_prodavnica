@@ -29,7 +29,9 @@ class Item extends StatelessWidget {
                 Icons.add_shopping_cart,
                 color: Colors.grey,
               ),
+              splashColor: Colors.red.shade900,
               onPressed: () {
+                // ignore: deprecated_member_use
                 Scaffold.of(context).showSnackBar(SnackBar(
                   duration: Duration(seconds: 1),
                   content: Text(

@@ -50,6 +50,6 @@ class _IgrePageState extends State<IgrePage> {
                 ),
               ),
             ]),
-        body: Container(height: 400, child: IgreProducts()));
+        body: ListView(children: <Widget>[IgreProducts()]));
   }
 }

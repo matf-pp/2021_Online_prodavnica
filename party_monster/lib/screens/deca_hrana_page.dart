@@ -16,41 +16,40 @@ class _DecaHranaPageState extends State<DecaHranaPage> {
     final cart = Provider.of<Cart>(context);
     int pdtnumber = cart.brojac;
     return Scaffold(
-      appBar: AppBar(
-          centerTitle: true,
-          title: Text('Hrana'),
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: <Color>[
-                  Colors.blue.shade900,
-                  Colors.red.shade900
-                ])),
-          ),
-          actions: <Widget>[
-            Badge(
-              badgeContent: Text('$pdtnumber',
-                  style: TextStyle(color: Colors.white, fontSize: 10)),
-              toAnimate: false,
-              position: BadgePosition.topEnd(top: 3, end: 3),
-              child: IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                  color: Colors.white,
-                  size: 30,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => KorpaPage()),
-                  );
-                },
-              ),
+        appBar: AppBar(
+            centerTitle: true,
+            title: Text('Hrana'),
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: <Color>[
+                    Colors.blue.shade900,
+                    Colors.red.shade900
+                  ])),
             ),
-          ]),
-      body: Container(height: 400, child: HranaProducts()),
-    );
+            actions: <Widget>[
+              Badge(
+                badgeContent: Text('$pdtnumber',
+                    style: TextStyle(color: Colors.white, fontSize: 10)),
+                toAnimate: false,
+                position: BadgePosition.topEnd(top: 3, end: 3),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => KorpaPage()),
+                    );
+                  },
+                ),
+              ),
+            ]),
+        body: ListView(children: <Widget>[HranaProducts()]));
   }
 }

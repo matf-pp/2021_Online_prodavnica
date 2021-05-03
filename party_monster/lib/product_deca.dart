@@ -537,6 +537,22 @@ class Products with ChangeNotifier {
           'https://www.ideaonline.me/images/products/440/440001188_1l.jpg?1554132047',
       price: 130,
     ),
+    Product(
+      id: '67',
+      category: 'Alkohol',
+      name: 'Dunja',
+      imgUrl:
+          'https://krstasica.com/wp-content/uploads/2016/12/dunja_rakija_krstasica_fruska-gora-700x700.jpg',
+      price: 900,
+    ),
+    Product(
+      id: '68',
+      category: 'Alkohol',
+      name: 'Vermut',
+      imgUrl:
+          'https://www.ediskont.rs/uploads/store/products/images/vermouth_beli_caldirola_1l_812.jpg',
+      price: 850,
+    ),
   ];
 
   List<Product> get items {

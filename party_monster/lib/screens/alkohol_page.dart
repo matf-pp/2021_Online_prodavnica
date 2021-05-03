@@ -50,6 +50,6 @@ class _AlkoholPageState extends State<AlkoholPage> {
                 ),
               ),
             ]),
-        body: Container(height: 400, child: AlkoholProducts()));
+        body: ListView(children: <Widget>[AlkoholProducts()]));
   }
 }

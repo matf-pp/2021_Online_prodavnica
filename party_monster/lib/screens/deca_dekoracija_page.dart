@@ -50,6 +50,6 @@ class _DecaDekoracijaPageState extends State<DecaDekoracijaPage> {
                 ),
               ),
             ]),
-        body: Container(height: 400, child: DekoracijaProducts()));
+        body: ListView(children: <Widget>[DekoracijaProducts()]));
   }
 }

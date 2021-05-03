@@ -53,8 +53,8 @@ class Products with ChangeNotifier {
       id: '5',
       category: 'Dekoracija',
       name: 'Vatromet',
-      imgUrl: 'http://i.pics.rs/75q8V.png',
-      // 'https://spmstamenkovic.com/wp-content/uploads/2017/04/vatromet-3modela-2-600x462.jpg',
+      imgUrl:
+          'https://spmstamenkovic.com/wp-content/uploads/2017/04/vatromet-3modela-2-600x462.jpg',
       price: 300,
     ),
     Product(
@@ -91,7 +91,7 @@ class Products with ChangeNotifier {
     Product(
       id: '10',
       category: 'Nargila',
-      name: 'nargila',
+      name: 'Cokolada',
       imgUrl:
           'https://umbrellashop.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/008254.jpg',
       price: 60,
@@ -124,8 +124,8 @@ class Products with ChangeNotifier {
       id: '14',
       category: 'Sokovi',
       name: 'Fanta',
-      imgUrl: 'https://probar.rs/proizvod/fanta-2l-paket-od-8-komada/',
-      //'https://shop.bastapromet.rs/images/2020/05/1590656316-cocacola2l528.jpg',
+      imgUrl:
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/hb5/h01/8850339233822.png',
       price: 120,
     ),
     Product(

@@ -7,8 +7,14 @@ import 'package:party_monster/screens/landing_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // Ovaj vidget je osnova nase aplikacije.
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(
           value: Products(),
@@ -23,23 +29,15 @@ void main() {
           value: Cart(),
         )
       ],
-      child: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  // Ovaj vidget je osnova nase aplikacije.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          textTheme: GoogleFonts.poppinsTextTheme(
+            Theme.of(context).textTheme,
+          ),
         ),
+        home: LandingPage(),
       ),
-      home: LandingPage(),
     );
   }
 }

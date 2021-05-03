@@ -62,15 +62,15 @@ flutter:
     - assets/adultsParty.jpg
     - assets/kidsParty.jpg
     - assets/izdvojenoIzPonude.png
-    - pictures/deca_carousel_pictures/pic1.jpeg
-    - pictures/deca_carousel_pictures/pic2.jpeg
-    - pictures/deca_carousel_pictures/pic3.jpeg
-    - pictures/deca_carousel_pictures/pic4.jpeg
-    - pictures/deca_carousel_pictures/pic5.jpeg
-    - pictures/odrasli_carousel_pictures/pic1.jpeg
-    - pictures/odrasli_carousel_pictures/pic2.jpeg
-    - pictures/odrasli_carousel_pictures/pic3.jpeg
-    - pictures/odrasli_carousel_pictures/pic4.jpeg
+    - pictures/deca_carousel_pictures/deca1.webp
+    - pictures/deca_carousel_pictures/deca2.jpg
+    - pictures/deca_carousel_pictures/deca3.jpg
+    - pictures/deca_carousel_pictures/deca4.jpg
+    - pictures/deca_carousel_pictures/deca5.jpg
+    - pictures/odrasli_carousel_pictures/odrasli1.jpg
+    - pictures/odrasli_carousel_pictures/odrasli2.jpg
+    - pictures/odrasli_carousel_pictures/odrasli3.jpg
+    - pictures/odrasli_carousel_pictures/odrasli4.jpg
     - pictures/odrasli_carousel_pictures/pic5.jpeg
 
   #   - images/a_dot_ham.jpeg

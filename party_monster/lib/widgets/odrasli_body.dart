@@ -11,10 +11,10 @@ class OdrasliBody extends StatelessWidget {
       child: Carousel(
           boxFit: BoxFit.cover,
           images: [
-            AssetImage('pictures/odrasli_carousel_pictures/pic1.jpeg'),
-            AssetImage('pictures/odrasli_carousel_pictures/pic2.jpeg'),
-            AssetImage('pictures/odrasli_carousel_pictures/pic3.jpeg'),
-            AssetImage('pictures/odrasli_carousel_pictures/pic4.jpeg'),
+            AssetImage('pictures/odrasli_carousel_pictures/odrasli1.jpg'),
+            AssetImage('pictures/odrasli_carousel_pictures/odrasli2.jpg'),
+            AssetImage('pictures/odrasli_carousel_pictures/odrasli3.jpg'),
+            AssetImage('pictures/odrasli_carousel_pictures/odrasli4.jpg'),
             AssetImage('pictures/odrasli_carousel_pictures/pic5.jpeg'),
           ],
           autoplay: false,

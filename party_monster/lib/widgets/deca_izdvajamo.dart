@@ -11,7 +11,12 @@ class IzdvajamoDecaProducts extends StatelessWidget {
     final productData = Provider.of<Products>(context);
     final pdts = productData.items;
     for (var i = 0; i < pdts.length; i++) {
-      if (pdts[i].id == '5' || pdts[i].id == '4') {
+      if (pdts[i].id == '60' ||
+          pdts[i].id == '8' ||
+          pdts[i].id == '7' ||
+          pdts[i].id == '22' ||
+          pdts[i].id == '26' ||
+          pdts[i].id == '25') {
         izdvajamo_deca.add(pdts[i]);
       }
     }

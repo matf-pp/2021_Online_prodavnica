@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/components/horrizontal_view_deca.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import '../widgets/all_products.dart';
+import '../widgets/deca_izdvajamo.dart';
 
 class DecaBody extends StatelessWidget {
   @override
@@ -24,19 +24,28 @@ class DecaBody extends StatelessWidget {
     return new ListView(children: <Widget>[
       imageCarousel,
       new Padding(
-        //padding widget
         padding: const EdgeInsets.all(8.0),
         child: new Text(
-          "Kategorije:",
+          "Kategorije",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
           ),
         ),
       ),
-      //horrizontal listview
       HorrizontalList(),
-      Container(height: 400, child: AllProducts())
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          'Izdvajamo iz ponude:',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+          ),
+        ),
+      ),
+      Container(height: 400, child: IzdvajamoDecaProducts())
     ]);
   }
 }

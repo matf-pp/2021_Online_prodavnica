@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:party_monster/screens/deca_hrana_page.dart';
+import 'package:party_monster/screens/deca_pice_page.dart';
+import 'package:party_monster/screens/deca_dekoracija_page.dart';
 
 class HorrizontalList extends StatelessWidget {
   @override
@@ -9,24 +12,43 @@ class HorrizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            ikonica: new Icon(
-              Icons.restaurant,
-              size: 50.0,
+            ikonica: IconButton(
+              icon: Icon(
+                Icons.restaurant,
+                size: 45.0,
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DecaHranaPage()));
+              },
             ),
             opis: 'Hrana',
           ),
           Category(
-            ikonica: new Icon(
-              Icons.local_drink,
-              size: 50.0,
+            ikonica: IconButton(
+              icon: Icon(
+                Icons.local_drink,
+                size: 45.0,
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DecaPicePage()));
+              },
             ),
-            opis: 'Piće',
+            opis: 'Sokovi',
           ),
           Category(
-            ikonica: new Icon(
-              Icons.star,
-              size: 50.0,
-            ),
+            ikonica: IconButton(
+                icon: Icon(
+                  Icons.star,
+                  size: 45.0,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DecaDekoracijaPage()));
+                }),
             opis: 'Dekoracija',
           ),
         ],
@@ -36,7 +58,7 @@ class HorrizontalList extends StatelessWidget {
 }
 
 class Category extends StatelessWidget {
-  final Icon ikonica;
+  final IconButton ikonica;
   final String opis;
 
   Category({this.ikonica, this.opis});

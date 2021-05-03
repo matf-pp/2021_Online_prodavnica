@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/components/horrizontal_view_odrasli.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import '../widgets/all_products_odrasli.dart';
+import '../widgets/odrasli_izdvajamo.dart';
 
 class OdrasliBody extends StatelessWidget {
   @override
@@ -24,20 +24,28 @@ class OdrasliBody extends StatelessWidget {
     return new ListView(children: <Widget>[
       imageCarousel,
       new Padding(
-        //padding widget
         padding: const EdgeInsets.all(8.0),
         child: new Text(
           "Kategorije:",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
           ),
         ),
       ),
-
-      //horrizontal listview
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          'Izdvajamo iz ponude:',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+          ),
+        ),
+      ),
       HorrizontalList(),
-      Container(height: 400, child: AllProductsOdrasli()),
+      Container(height: 400, child: IzdvajamoOdrasliProducts()),
     ]);
   }
 }

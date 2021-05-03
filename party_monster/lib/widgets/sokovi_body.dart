@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../product_odrasli.dart';
+import '../product_deca.dart';
 import './Item.dart';
 
-class AllProductsOdrasli extends StatelessWidget {
+class SokoviProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final productData = Provider.of<ProductsO>(context);
+    List<Product> sokovi = [];
+    final productData = Provider.of<Products>(context);
     final pdts = productData.items;
+    for (var i = 0; i < pdts.length; i++) {
+      if (pdts[i].category == 'Sokovi') {
+        sokovi.add(pdts[i]);
+      }
+    }
     return GridView.builder(
       physics: ScrollPhysics(),
       shrinkWrap: true,
-      itemCount: pdts.length,
+      itemCount: sokovi.length,
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (context, i) => ChangeNotifierProvider.value(
-          value: pdts[i],
+          value: sokovi[i],
           child: Item(
-            name: pdts[i].name,
-            price: pdts[i].price,
-            imageUrl: pdts[i].imgUrl,
+            name: sokovi[i].name,
+            price: sokovi[i].price,
+            imageUrl: sokovi[i].imgUrl,
           )),
     );
   }

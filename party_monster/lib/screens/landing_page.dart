@@ -1,4 +1,5 @@
 //Ovo je ono sto se pojavi kad pokrenemo aplikaciju
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -27,7 +28,7 @@ class LandingPage extends StatelessWidget {
             body: Stack(children: [DrawerScreen(), HomePage()]),
           ); //Ovde zadajemo sta ce se prikazati kad se aplikacija pokrene
         }
-        //Firebase app is loadig...
+        //Firebase app is loading...
         return Scaffold(
           body: Container(
               decoration: BoxDecoration(

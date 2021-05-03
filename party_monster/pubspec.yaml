@@ -23,6 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  carousel_pro: ^1.0.0
+  provider: ^5.0.0
+  http: ^0.13.2
+  badges: ^1.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -57,6 +62,17 @@ flutter:
     - assets/adultsParty.jpg
     - assets/kidsParty.jpg
     - assets/izdvojenoIzPonude.png
+    - pictures/deca_carousel_pictures/pic1.jpeg
+    - pictures/deca_carousel_pictures/pic2.jpeg
+    - pictures/deca_carousel_pictures/pic3.jpeg
+    - pictures/deca_carousel_pictures/pic4.jpeg
+    - pictures/deca_carousel_pictures/pic5.jpeg
+    - pictures/odrasli_carousel_pictures/pic1.jpeg
+    - pictures/odrasli_carousel_pictures/pic2.jpeg
+    - pictures/odrasli_carousel_pictures/pic3.jpeg
+    - pictures/odrasli_carousel_pictures/pic4.jpeg
+    - pictures/odrasli_carousel_pictures/pic5.jpeg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

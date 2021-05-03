@@ -1,9 +1,12 @@
 //Ovo je Home Page
+
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
-import 'package:party_monster/screens/izdvojeno_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/screens/odrasli_page.dart';
+import '../cart.dart';
+import 'package:badges/badges.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   double yOffset = 0;
   double scaleFactor = 1;
   bool isDrawerOpen = false; //Da li je otvoren side meni
-  bool isNightMode = true; //Da li je nocni rezim aktiviran
+  // bool isNightMode = true; //Da li je nocni rezim aktiviran
   //TO DO- Treba da se dovrsi night Mode ili da se obrise ta opcija
   Color colorText = Colors.white;
   Color nightColor1 = Colors.blue.shade900;
@@ -27,6 +30,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<Cart>(context);
+    int pdtnumber = cart.brojac;
     return AnimatedContainer(
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
         ..scale(scaleFactor),
@@ -55,6 +60,7 @@ class _HomePageState extends State<HomePage> {
                     icon: Icon(
                       Icons.menu,
                       color: colorText,
+                      size: 30,
                     ),
                     onPressed: () {
                       setState(() {
@@ -66,46 +72,53 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
             actions: <Widget>[
-              isNightMode
-                  ? IconButton(
-                      icon: Icon(
-                        Icons.wb_sunny_rounded,
-                        color: colorText,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          isNightMode = false;
-                          colorText = Colors.black;
-                          color1 = lightColor1;
-                          color2 = lightColor2;
-                        });
-                      },
-                    )
-                  : IconButton(
-                      icon: Icon(
-                        Icons.nightlight_round,
-                        color: colorText,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          isNightMode = true;
-                          colorText = Colors.white;
-                          color1 = nightColor1;
-                          color2 = nightColor2;
-                        });
-                      },
-                    ),
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_bag_outlined,
-                  color: colorText,
+              // isNightMode
+              //  ? IconButton(
+              // icon: Icon(
+              //  Icons.wb_sunny_rounded,
+              //  color: colorText,
+              //  ),
+              //  onPressed: () {
+              //  setState(() {
+              //   isNightMode = false;
+              //   colorText = Colors.black;
+              //    color1 = lightColor1;
+              //   color2 = lightColor2;
+              // });
+              //},
+              // )
+              // : IconButton(
+              // icon: Icon(
+              //   Icons.nightlight_round,
+              //  color: colorText,
+              //),
+              //onPressed: () {
+              //setState(() {
+              //isNightMode = true;
+              //colorText = Colors.white;
+              //color1 = nightColor1;
+              // color2 = nightColor2;
+              // });
+              // },
+              // ),
+              Badge(
+                badgeContent: Text('$pdtnumber',
+                    style: TextStyle(color: Colors.white, fontSize: 10)),
+                toAnimate: false,
+                position: BadgePosition.topEnd(top: 3, end: 3),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => KorpaPage()),
+                    );
+                  },
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => KorpaPage()),
-                  );
-                },
               ),
             ],
             centerTitle: true,
@@ -141,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                         child: Image.asset(
                           'assets/adultsParty.jpg',
                           fit: BoxFit.cover,
-                          height: 350,
+                          height: 380,
                         ),
                       ),
                     ),
@@ -159,28 +172,28 @@ class _HomePageState extends State<HomePage> {
                         child: Image.asset(
                           'assets/kidsParty.jpg',
                           fit: BoxFit.cover,
-                          height: 350,
+                          height: 380,
                         ),
                       ),
                     ),
                     //Dugme IzdvojenoIzPonude
-                    Container(
-                      child: TextButton(
-                        style:
-                            TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => IzdvojenoPage()),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/izdvojenoIzPonude.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   child: TextButton(
+                    //     style:
+                    //         TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
+                    //     onPressed: () {
+                    //       Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => IzdvojenoPage()),
+                    //       );
+                    //     },
+                    //     child: Image.asset(
+                    //       'assets/izdvojenoIzPonude.png',
+                    //       fit: BoxFit.cover,
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

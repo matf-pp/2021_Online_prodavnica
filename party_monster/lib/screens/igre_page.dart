@@ -1,18 +1,16 @@
-// Ovo je Odrasli Page
-
 import 'package:flutter/material.dart';
-import 'package:party_monster/widgets/odrasli_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
+import 'package:party_monster/widgets/igre_body.dart';
+import 'package:provider/provider.dart';
 import '../cart.dart';
 import 'package:badges/badges.dart';
-import 'package:provider/provider.dart';
 
-class OdrasliPage extends StatefulWidget {
+class IgrePage extends StatefulWidget {
   @override
-  _OdrasliPageState createState() => _OdrasliPageState();
+  _IgrePageState createState() => _IgrePageState();
 }
 
-class _OdrasliPageState extends State<OdrasliPage> {
+class _IgrePageState extends State<IgrePage> {
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
@@ -20,7 +18,7 @@ class _OdrasliPageState extends State<OdrasliPage> {
     return Scaffold(
         appBar: AppBar(
             centerTitle: true,
-            title: Text('Odrasli '),
+            title: Text('Igre'),
             flexibleSpace: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -52,6 +50,6 @@ class _OdrasliPageState extends State<OdrasliPage> {
                 ),
               ),
             ]),
-        body: OdrasliBody());
+        body: Container(height: 400, child: IgreProducts()));
   }
 }

@@ -1,18 +1,16 @@
-//Ovo je Deca Page
-
 import 'package:flutter/material.dart';
-import 'package:party_monster/widgets/deca_body.dart';
+import 'package:party_monster/widgets/hrana_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
 import '../cart.dart';
 import 'package:badges/badges.dart';
 
-class DecaPage extends StatefulWidget {
+class DecaHranaPage extends StatefulWidget {
   @override
-  _DecaPageState createState() => _DecaPageState();
+  _DecaHranaPageState createState() => _DecaHranaPageState();
 }
 
-class _DecaPageState extends State<DecaPage> {
+class _DecaHranaPageState extends State<DecaHranaPage> {
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
@@ -20,7 +18,7 @@ class _DecaPageState extends State<DecaPage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
-          title: Text('Deca'),
+          title: Text('Hrana'),
           flexibleSpace: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -52,40 +50,7 @@ class _DecaPageState extends State<DecaPage> {
               ),
             ),
           ]),
-      body: DecaBody(),
+      body: Container(height: 400, child: HranaProducts()),
     );
   }
 }
-
-//class _DecaPageState extends State<DecaPage> {
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(
-//        centerTitle: true,
-//       title: Text('PartyMonster'),
-//        flexibleSpace: Container(
-//          decoration: BoxDecoration(
-//              gradient: LinearGradient(
-//                  begin: Alignment.topLeft,
-//                  end: Alignment.bottomRight,
-//                  colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
-//       ),
-//      ),
-//      body: Container(
-//        decoration: BoxDecoration(
-//            gradient: LinearGradient(
-//                begin: Alignment.topLeft,
-//               end: Alignment.bottomRight,
-//                colors: <Color>[Colors.blue.shade900, Colors.red.shade900])),
-//        child: Center(
-//Ovde ide sadrzaj strane
-//          child: Text(
-//            "Oprema za zurke za decu",
-//            style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
-//          ),
-//        ),
-//      ),
-//    );
-//  }
-//}

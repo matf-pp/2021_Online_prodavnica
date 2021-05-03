@@ -50,6 +50,6 @@ class _DecaPicePageState extends State<DecaPicePage> {
                 ),
               ),
             ]),
-        body: Container(height: 400, child: SokoviProducts()));
+        body: ListView(children: <Widget>[SokoviProducts()]));
   }
 }

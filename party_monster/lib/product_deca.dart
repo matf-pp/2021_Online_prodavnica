@@ -23,23 +23,23 @@ class Products with ChangeNotifier {
       name: 'Smoki',
       imgUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 35,
+      price: 110,
     ),
     Product(
       id: '2',
       category: 'Sokovi',
-      name: 'Jabuka',
+      name: 'Sprite',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 100,
+          'https://plitvicemarketi.rs/images/thumbs/0013902_sprite-1l_511.png',
+      price: 130,
     ),
     Product(
       id: '3',
       category: 'Hrana',
-      name: 'Cips',
+      name: 'Čips',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 60,
+          'https://plitvicemarketi.rs/images/thumbs/0013445_chipsy-classic-150g_511.png',
+      price: 150,
     ),
     Product(
       id: '4',
@@ -83,18 +83,18 @@ class Products with ChangeNotifier {
     Product(
       id: '9',
       category: 'Nargila',
-      name: 'Jagoda',
+      name: 'Nargila',
       imgUrl:
-          'https://lh3.googleusercontent.com/proxy/bvZxGs8kpPjat8bSgDpzJB9OQB3033sQqgBo7EBSEofS2K3V-T-zEC1GirOQZWpUPrAArfWhqgAJ0VafJusrvrMnoOkYi7VBjWkVcXR1OUJ6Wt-b_c-RJziI9bTbnw',
-      price: 100,
+          'https://nargile.me/wp-content/uploads/2017/07/amy-deluxe-630d-08.jpg',
+      price: 1200,
     ),
     Product(
       id: '10',
       category: 'Nargila',
       name: 'Cokolada',
       imgUrl:
-          'https://umbrellashop.rs/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/008254.jpg',
-      price: 60,
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008114.jpg',
+      price: 500,
     ),
     Product(
       id: '11',
@@ -124,16 +124,16 @@ class Products with ChangeNotifier {
       id: '14',
       category: 'Sokovi',
       name: 'Fanta',
-      imgUrl:
-          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/hb5/h01/8850339233822.png',
+      imgUrl: 'https://probar.rs/wp-content/uploads/2019/09/fanta2l-scaled.jpg',
       price: 120,
     ),
     Product(
       id: '15',
       category: 'Nargila',
       name: 'Menta',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008102.jpg',
+      price: 500,
     ),
     Product(
       id: '16',
@@ -156,47 +156,47 @@ class Products with ChangeNotifier {
       category: 'Sokovi',
       name: 'Breskva',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 100,
+          'https://cenoteka.rs/assets/images/articles/vocni-sok-next-classic-breskva-1l-1000480-large.jpg',
+      price: 110,
     ),
     Product(
       id: '19',
       category: 'Sokovi',
       name: 'Pomorandza',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 100,
+          'https://cenoteka.rs/assets/images/articles/vocni-sok-next-classic-pomorandza-1l-1000488-large.jpg',
+      price: 110,
     ),
     Product(
       id: '20',
       category: 'Sokovi',
       name: 'Sumsko voce',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 100,
+          'https://online.idea.rs/images/products/471/471103617_1l.jpg?1532949110',
+      price: 110,
     ),
     Product(
       id: '21',
       category: 'Sokovi',
       name: 'Multivitamin',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 100,
+          'https://paralelaplus.rs/wp-content/uploads/2020/05/Sok-multivitamin-Next-Classic-1l.png',
+      price: 110,
     ),
     Product(
       id: '22',
       category: 'Sokovi',
-      name: 'Sprite',
+      name: 'Jabuka',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyL1dpP4SDqZG8_ffBJ8ucy0x1mrF6ALUzA&usqp=CAU',
-      price: 120,
+          'https://cenoteka.rs/assets/images/articles/vocni-sok-next-jabuka-1-5l-1007999-large.jpg',
+      price: 110,
     ),
     Product(
       id: '23',
       category: 'Hrana',
       name: 'Jaffa',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+          'https://www.tablicakalorija.com/wp-content/uploads/2017/10/jaffa-keks-730x430.jpg',
       price: 80,
     ),
     Product(
@@ -204,7 +204,7 @@ class Products with ChangeNotifier {
       category: 'Dekoracija',
       name: 'Baloni',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+          'https://www.balonservis.rs/wp-content/uploads/2016/01/%C5%A0tampani-balon-vatromet.jpg',
       price: 90,
     ),
     Product(
@@ -212,31 +212,31 @@ class Products with ChangeNotifier {
       category: 'Dekoracija',
       name: 'Svecice',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 90,
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/he8/h71/8829756440606.png',
+      price: 100,
     ),
     Product(
       id: '26',
       category: 'Dekoracija',
       name: 'Kapice',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 90,
+          'https://www.balon-shop.com/wp-content/uploads/kapice-papirne-320x320.jpg',
+      price: 230,
     ),
     Product(
       id: '27',
       category: 'Hrana',
       name: 'Mix',
       imgUrl:
-          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
-      price: 150,
+          'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/h7f/h9f/8882746785822.jpg',
+      price: 250,
     ),
     Product(
       id: '28',
       category: 'Hrana',
       name: 'Kikiriki',
       imgUrl:
-          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
+          'https://funandfit.rs/uploads/pages/19-kikiriki-peceni-slani-2.png',
       price: 150,
     ),
     Product(
@@ -244,117 +244,125 @@ class Products with ChangeNotifier {
       category: 'Hrana',
       name: 'Semenke',
       imgUrl:
-          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
-      price: 150,
+          'https://online.idea.rs/images/products/106/106013554_1l.jpg?1607951746',
+      price: 100,
     ),
     Product(
       id: '30',
       category: 'Hrana',
       name: 'Suncokret',
       imgUrl:
-          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
-      price: 150,
+          'https://paralelaplus.rs/wp-content/uploads/2020/05/Suncokret-u-ljusciprzslani-Mogyi-60g.png',
+      price: 100,
     ),
     Product(
       id: '31',
       category: 'Dekoracija',
-      name: 'Duvaljke',
+      name: 'Trubice',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 90,
+          'https://www.svetbalona.com/wp-content/uploads/2019/11/bele-trubice-sa-zlatnim-zvezdicama-01.jpg',
+      price: 150,
     ),
     Product(
       id: '32',
       category: 'Dekoracija',
       name: 'Tanjirici',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
-      price: 90,
+          'https://lh3.googleusercontent.com/proxy/2LbGVHMZWITx5VUvwfVizKBx_bvwMsIUXZIAsI_myPKg5aX710eVcKawB1dU4e0spIP-3iIWiVC6hGo-gKoIUG_nMncWzaz7bPIhdp84iCc',
+      price: 120,
     ),
     Product(
       id: '33',
       category: 'Dekoracija',
       name: 'Salvete',
-      imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      imgUrl: 'https://tropik.ba/wp-content/uploads/8434077071311-2161.jpg',
       price: 90,
     ),
     Product(
       id: '34',
       category: 'Nargila',
       name: 'Breskva',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008112.jpg',
+      price: 500,
     ),
     Product(
       id: '35',
       category: 'Nargila',
       name: 'Jabuka',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008101.jpg',
+      price: 500,
     ),
     Product(
       id: '36',
       category: 'Nargila',
-      name: 'Vanila',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'Malina',
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008115.jpg',
+      price: 500,
     ),
     Product(
       id: '37',
       category: 'Nargila',
-      name: 'Kokos',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'Dinja',
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008105.jpg',
+      price: 500,
     ),
     Product(
       id: '38',
       category: 'Nargila',
-      name: 'Kafa',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'Lubenica',
+      imgUrl:
+          'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008144.jpg',
+      price: 500,
     ),
     Product(
       id: '39',
       category: 'Igre',
-      name: 'Ne ljuti se covece',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'Ludo',
+      imgUrl:
+          'https://images-na.ssl-images-amazon.com/images/I/81gb3h91pML._AC_SX679_.jpg',
+      price: 500,
     ),
     Product(
       id: '40',
       category: 'Igre',
       name: 'Karte',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl:
+          'https://www.gadget4gift.com/wp-content/uploads/2018/proizvodi/karte-mini.jpg',
+      price: 150,
     ),
     Product(
       id: '41',
       category: 'Igre',
-      name: 'Monopol',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'Tvist',
+      imgUrl: 'https://www.oddoigracke.rs/proizvodi/6616/twist.jpg',
+      price: 700,
     ),
     Product(
       id: '42',
       category: 'Igre',
       name: 'Monopol',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl: 'https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=HRAbz02681',
+      price: 1000,
     ),
     Product(
       id: '43',
       category: 'Igre',
       name: 'Yamb',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      imgUrl:
+          'https://dijaspora.shop/media/catalog/product/cache/1/thumbnail/1000x1000/9df78eab33525d08d6e5fb8d27136e95/3/8/3859888377257-7264.jpg',
+      price: 230,
     ),
     Product(
       id: '44',
       category: 'Igre',
-      name: 'PS4',
-      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
-      price: 65,
+      name: 'PS4/dan',
+      imgUrl:
+          'https://media.wired.com/photos/5a99f809b4bf6c3e4d405abc/1:1/w_960,h_960,c_limit/PS4-Pro-SOURCE-Sony.jpg',
+      price: 1500,
     ),
   ];
 

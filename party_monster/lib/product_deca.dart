@@ -201,11 +201,160 @@ class Products with ChangeNotifier {
     ),
     Product(
       id: '24',
-      category: 'Hrana',
-      name: 'Napolitanke',
+      category: 'Dekoracija',
+      name: 'Baloni',
       imgUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
       price: 90,
+    ),
+    Product(
+      id: '25',
+      category: 'Dekoracija',
+      name: 'Svecice',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      price: 90,
+    ),
+    Product(
+      id: '26',
+      category: 'Dekoracija',
+      name: 'Kapice',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      price: 90,
+    ),
+    Product(
+      id: '27',
+      category: 'Hrana',
+      name: 'Mix',
+      imgUrl:
+          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
+      price: 150,
+    ),
+    Product(
+      id: '28',
+      category: 'Hrana',
+      name: 'Kikiriki',
+      imgUrl:
+          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
+      price: 150,
+    ),
+    Product(
+      id: '29',
+      category: 'Hrana',
+      name: 'Semenke',
+      imgUrl:
+          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
+      price: 150,
+    ),
+    Product(
+      id: '30',
+      category: 'Hrana',
+      name: 'Suncokret',
+      imgUrl:
+          'https://online.idea.rs/images/products/446/446105032_1l.jpg?1593015462',
+      price: 150,
+    ),
+    Product(
+      id: '31',
+      category: 'Dekoracija',
+      name: 'Duvaljke',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      price: 90,
+    ),
+    Product(
+      id: '32',
+      category: 'Dekoracija',
+      name: 'Tanjirici',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      price: 90,
+    ),
+    Product(
+      id: '33',
+      category: 'Dekoracija',
+      name: 'Salvete',
+      imgUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yEzidFDDiU2jO81xe-DZVuq_SUiZSNp4Dg&usqp=CAU+',
+      price: 90,
+    ),
+    Product(
+      id: '34',
+      category: 'Nargila',
+      name: 'Breskva',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '35',
+      category: 'Nargila',
+      name: 'Jabuka',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '36',
+      category: 'Nargila',
+      name: 'Vanila',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '37',
+      category: 'Nargila',
+      name: 'Kokos',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '38',
+      category: 'Nargila',
+      name: 'Kafa',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '39',
+      category: 'Igre',
+      name: 'Ne ljuti se covece',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '40',
+      category: 'Igre',
+      name: 'Karte',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '41',
+      category: 'Igre',
+      name: 'Monopol',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '42',
+      category: 'Igre',
+      name: 'Monopol',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '43',
+      category: 'Igre',
+      name: 'Yamb',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
+    ),
+    Product(
+      id: '44',
+      category: 'Igre',
+      name: 'PS4',
+      imgUrl: 'https://nargilashopbeograd.rs/wp-content/uploads/mint-1-1.jpg',
+      price: 65,
     ),
   ];
 

@@ -126,7 +126,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   Icon(
                     Icons.phone,
                     color: Colors.white,
-                    size: 40,
+                    size: 30,
                   ),
                   SizedBox(
                     width: 10,
@@ -136,34 +136,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
-                  )
-                ],
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ONamaPage()),
-                );
-              },
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.info_outline,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'O nama',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30),
+                        fontSize: 20),
                   )
                 ],
               ),
@@ -180,7 +153,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   Icon(
                     Icons.question_answer_outlined,
                     color: Colors.white,
-                    size: 40,
+                    size: 30,
                   ),
                   SizedBox(
                     width: 10,
@@ -190,7 +163,34 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
+                        fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ONamaPage()),
+                );
+              },
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.info_outline,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'O nama',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
                   )
                 ],
               ),

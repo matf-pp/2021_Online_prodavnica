@@ -60,7 +60,7 @@ class Products with ChangeNotifier {
     Product(
       id: '6',
       category: 'Hrana',
-      name: 'Stapici',
+      name: 'Štapići',
       imgUrl: 'https://elakolije.rs/slike_pro/pro_v_1015670.jpg',
       price: 65,
     ),
@@ -91,7 +91,7 @@ class Products with ChangeNotifier {
     Product(
       id: '10',
       category: 'Nargila',
-      name: 'Cokolada',
+      name: 'Čokolada',
       imgUrl:
           'https://umbrellashop.rs/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/0/0/008114.jpg',
       price: 500,
@@ -99,7 +99,7 @@ class Products with ChangeNotifier {
     Product(
       id: '11',
       category: 'Alkohol',
-      name: 'Dzin',
+      name: 'Džin',
       imgUrl:
           'https://cenoteka.rs/assets/images/articles/dzin-gordons-0-7l-1003420-large.jpg',
       price: 500,
@@ -162,7 +162,7 @@ class Products with ChangeNotifier {
     Product(
       id: '19',
       category: 'Sokovi',
-      name: 'Pomorandza',
+      name: 'Pomorandža',
       imgUrl:
           'https://cenoteka.rs/assets/images/articles/vocni-sok-next-classic-pomorandza-1l-1000488-large.jpg',
       price: 110,
@@ -170,7 +170,7 @@ class Products with ChangeNotifier {
     Product(
       id: '20',
       category: 'Sokovi',
-      name: 'Sumsko voce',
+      name: 'Šumsko voce',
       imgUrl:
           'https://online.idea.rs/images/products/471/471103617_1l.jpg?1532949110',
       price: 110,
@@ -210,7 +210,7 @@ class Products with ChangeNotifier {
     Product(
       id: '25',
       category: 'Dekoracija',
-      name: 'Svecice',
+      name: 'Svećice',
       imgUrl:
           'https://d3el976p2k4mvu.cloudfront.net/medias/sys_master/he8/h71/8829756440606.png',
       price: 100,
@@ -266,9 +266,9 @@ class Products with ChangeNotifier {
     Product(
       id: '32',
       category: 'Dekoracija',
-      name: 'Tanjirici',
+      name: 'Tanjirići',
       imgUrl:
-          'https://lh3.googleusercontent.com/proxy/2LbGVHMZWITx5VUvwfVizKBx_bvwMsIUXZIAsI_myPKg5aX710eVcKawB1dU4e0spIP-3iIWiVC6hGo-gKoIUG_nMncWzaz7bPIhdp84iCc',
+          'https://www.balon-shop.com/wp-content/uploads/happy-birthday-tanjiri-dekoracija-320x320.jpg',
       price: 120,
     ),
     Product(
@@ -420,7 +420,7 @@ class Products with ChangeNotifier {
     Product(
       id: '52',
       category: 'Alkohol',
-      name: 'Rose',
+      name: 'Rose vino',
       imgUrl:
           'https://www.ediskont.rs/uploads/store/products/images/moje_vino_roze_plantaze_1l_549.jpg',
       price: 400,
@@ -444,7 +444,7 @@ class Products with ChangeNotifier {
     Product(
       id: '55',
       category: 'Dekoracija',
-      name: 'Case',
+      name: 'Čaše',
       imgUrl:
           'https://cdn.shopify.com/s/files/1/1901/3435/products/9100cp-caspari-happy-birthday-paper-cups-8-per-package-4818964807727.jpg?v=1570140983',
       price: 250,

@@ -52,7 +52,7 @@ class _ONamaPageState extends State<ONamaPage> {
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Text(
-          'Učiniti momenat nezaboravnim je glavna misija PartyMonster-a!\nBilo da je Vaše dete napunilo 3 godine ili zelite da napravite nezaboravnu zurku za svoj 21. rodjendan bez brige, tu smo mi! Naš tim je Vaš verni saučesnik u planiranju zurki koje se pamte.\nZajedno sa Vama investiramo u radost, sreću i čarobne momente, jer zivot je jedna velika žurka!',
+          'Učiniti momenat nezaboravnim je glavna misija PartyMonster-a!\nBilo da je Vaše dete napunilo 3 godine ili želite da napravite nezaboravnu žurku za svoj 21. rodjendan bez brige, tu smo mi! Naš tim je Vaš verni saučesnik u planiranju žurki koje se pamte.\nZajedno sa Vama investiramo u radost, sreću i čarobne momente, jer život je jedna velika žurka!',
           textAlign: TextAlign.justify,
           style: TextStyle(fontSize: 18),
         ),

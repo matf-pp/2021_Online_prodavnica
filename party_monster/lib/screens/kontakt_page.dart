@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/components/horrizontal_view_socials.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
 import '../cart.dart';
@@ -18,7 +17,7 @@ class _KontaktPageState extends State<KontaktPage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
-          title: Text('Kontaktirajte nas'),
+          title: Text('Kontakt'),
           flexibleSpace: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -57,7 +56,7 @@ class _KontaktPageState extends State<KontaktPage> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Text(
-              'Za sve dodatne informacije mozete nas kontaktirati putem telefona ili mejla, ili nas mozete posetiti na adresi.',
+              'Za sve dodatne informacije možete nas kontaktirati putem telefona ili mejla, ili nas mozete posetiti na adresi.',
               textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 18),
             ),
@@ -92,15 +91,38 @@ class _KontaktPageState extends State<KontaktPage> {
               title: Text('Studentski trg 16, 11000 Beograd'),
             ),
           ),
-          Tab(
-              icon: new Image.asset(
-                  "https://i.pinimg.com/originals/1a/2a/80/1a2a80112ef4d3e431289f09d568f512.png"),
-              text: "Insta"),
-          Tab(
-              icon: new Image.asset(
-                  "https://img.icons8.com/ios/452/facebook-new.png"),
-              text: "Fejs"),
-          //HorrizontalList(),
+          Card(
+            margin: EdgeInsets.all(10.0),
+            child: ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 25,
+                  minHeight: 25,
+                  maxWidth: 25,
+                  maxHeight: 25,
+                ),
+                child: Image.asset('pictures/icons/instagram.png',
+                    fit: BoxFit.cover),
+              ),
+              title: Text('@party_monster_hsm'),
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(10.0),
+            child: ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 25,
+                  minHeight: 25,
+                  maxWidth: 25,
+                  maxHeight: 25,
+                ),
+                child: Image.asset('pictures/icons/facebook.png',
+                    fit: BoxFit.cover),
+              ),
+              title: Text('Party Monster'),
+            ),
+          ),
         ],
       )),
     );

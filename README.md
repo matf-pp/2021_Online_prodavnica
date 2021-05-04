@@ -6,6 +6,8 @@ For that reason **Party Monster, the prototip of an online-shopping app in Dart*
 For building our app we used Dart programing language and framework Flutter in Visual Studio Code.
 <h2>:wrench:The environment</h2>
 The app is made for Android and IOS operating system. 
+<h2>:open_file_folder:You will need</h2>
+
 <h2>:checkered_flag:Run the app</h2>
 <h2>:mortar_board:Authors</h2>
 

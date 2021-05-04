@@ -3,6 +3,8 @@ import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
 import '../cart.dart';
 import 'package:badges/badges.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 
 class PitanjaPage extends StatefulWidget {
   @override
@@ -12,6 +14,8 @@ class PitanjaPage extends StatefulWidget {
 class _PitanjaPageState extends State<PitanjaPage> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailcontroller = TextEditingController();
+    TextEditingController questioncontroller = TextEditingController();
     final cart = Provider.of<Cart>(context);
     int pdtnumber = cart.brojac;
     return Scaffold(
@@ -88,8 +92,128 @@ class _PitanjaPageState extends State<PitanjaPage> {
                   'Poruzbinu mozete ocekivati na svojoj adresi u roku od 48 sati.'),
             ),
           ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade300,
+                  blurRadius: 50.0,
+                  offset: Offset(0, -10), // Shadow position
+                ),
+                BoxShadow(
+                  color: Colors.white,
+                  blurRadius: 40.0,
+                  offset: Offset(0, 40), // Shadow position
+                ),
+              ],
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              child: TextField(
+                controller: emailcontroller,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'email:',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: TextFormField(
+              controller: questioncontroller,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Pitanje:',
+              ),
+            ),
+          ),
+          Container(
+            height: 50.0,
+            margin: EdgeInsets.all(10.0),
+            // ignore: deprecated_member_use
+            child: RaisedButton(
+              onPressed: cart.totalAmount <= 0.0
+                  ? null
+                  : () async {
+                      String email = emailcontroller.text;
+                      String question = questioncontroller.text;
+                      String tekst =
+                          "<h1>Porudzbina</h1>\n<p><b>Ime i prezime: </b> " +
+                              email +
+                              "</p><p><b>Adresa: </b>" +
+                              question +
+                              "</p><p><b>Poruceni proizvodi:</b></p><p>";
+
+                      cart.items.values.toList().forEach((element) => tekst =
+                          tekst +
+                              element.quantity.toString() +
+                              'X ' +
+                              element.name +
+                              '</p><p>');
+                      tekst = tekst +
+                          'Ukupno za uplatu: <b>' +
+                          (cart.totalAmount).toString() +
+                          '</b></p>';
+                      sendMail(tekst);
+                      emailcontroller.clear();
+                      questioncontroller.clear();
+                    },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Ink(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: <Color>[
+                          Colors.blue.shade900,
+                          Colors.red.shade900
+                        ]),
+                    borderRadius: BorderRadius.circular(30.0)),
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "PORUCI",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       )),
     );
+  }
+}
+
+sendMail(String tekst) async {
+  String username = 'hsmpartymonster@gmail.com';
+  String password = 'partymonsterhsm';
+
+  // ignore: deprecated_member_use
+  final smtpServer = gmail(username, password);
+  final message = Message()
+    ..from = Address(username)
+    ..recipients.add('mildim999@gmail.com')
+    ..recipients.add('Hristina.nik.pi@gmail.com')
+    ..recipients.add('sarazivkovic99@gmail.com')
+    ..subject = 'Imate novo pitanje na PartyMonster'
+    ..text = 'Pitanje'
+    ..html = tekst;
+
+  try {
+    final sendReport = await send(message, smtpServer);
+    print('Message sent: ' + sendReport.toString());
+  } on MailerException catch (e) {
+    print('Message not sent.');
+    for (var p in e.problems) {
+      print('Problem: ${p.code}: ${p.msg}');
+    }
   }
 }

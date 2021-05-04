@@ -93,13 +93,13 @@ class _KorpaPageState extends State<KorpaPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(),
+            padding: EdgeInsets.all(10.0),
             child: Text(
                 'Dostava za celu Srbiju iznosi 200 rsd.\nZa porudzbine preko 3000 rsd dostava je besplatna. \nVas racun je: $total rsd.'),
           ),
           Container(
             height: 50.0,
-            margin: EdgeInsets.all(10),
+            margin: EdgeInsets.all(10.0),
             // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: cart.totalAmount <= 0.0

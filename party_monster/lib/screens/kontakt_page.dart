@@ -59,6 +59,7 @@ class _KontaktPageState extends State<KontaktPage> {
             child: Text(
               'Za sve dodatne informacije mozete nas kontaktirati putem telefona ili mejla, ili nas mozete posetiti na adresi.',
               textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 18),
             ),
           ),
           Card(

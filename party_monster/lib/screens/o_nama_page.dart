@@ -50,9 +50,13 @@ class _ONamaPageState extends State<ONamaPage> {
             ),
           ]),
       body: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Text(
-              ' Učiniti momenat nezaboravnim je glavna misija Party Booster-a! Bilo da je Vaš pas napunio tri godine… ili da izgovarate sudbonosno „da“… a možda slavite stoti rođendan Vaše bake …  Ako ste posvećeni roditelj, pa ipak niste „Pinjata majstor“ ..ili ono kad organizujete korporativnu proslavu a očekivanja su velika..  ili ste u poslednjem trenutku prihvatili poziv za maskenbal a hoćete da sve očarate – bez brige, tu smo mi!Naš tim kreativaca je Vaš verni saučesnik u planiranju dekoracije događaja koji se pamte. Ukoliko nemate vremena, mi smo tu za Vas. Ako su ideje i inspiracija presušile, naših ima u obilju! Proizvodi i usluge koje nudimo pokrivaju svaki segment proslave što je najbitnije, zar ne. Od rođendanske svećice ili ukrasnih slova od stiropora, preko širokog sprektra balona do ludih i unikatnih maski i kostima. Dakle, sve na jednom mestu! Iza nas je tradicija duga dvadeset godina. Zajedno sa Vama godinama investiramo u radost, sreću i čarobne momente! Verujemo da zajedno možemo da nastavimo da nižemo nisku nezaboravnih momenata i uspomena. Život je jedna velika žurka! ')),
+        padding: EdgeInsets.all(20.0),
+        child: Text(
+          'Učiniti momenat nezaboravnim je glavna misija PartyMonster-a!\nBilo da je Vaše dete napunilo 3 godine ili zelite da napravite nezaboravnu zurku za svoj 21. rodjendan bez brige, tu smo mi! Naš tim je Vaš verni saučesnik u planiranju zurki koje se pamte.\nZajedno sa Vama investiramo u radost, sreću i čarobne momente, jer zivot je jedna velika žurka!',
+          textAlign: TextAlign.justify,
+          style: TextStyle(fontSize: 18),
+        ),
+      ),
     );
   }
 }

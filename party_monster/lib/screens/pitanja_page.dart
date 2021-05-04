@@ -87,7 +87,7 @@ class _PitanjaPageState extends State<PitanjaPage> {
                 Icons.question_answer,
                 color: Colors.red.shade900,
               ),
-              title: Text('Koja je rok isporuke?'),
+              title: Text('Koji je rok isporuke?'),
               subtitle: Text(
                   'Poruzbinu mozete ocekivati na svojoj adresi u roku od 48 sati.'),
             ),

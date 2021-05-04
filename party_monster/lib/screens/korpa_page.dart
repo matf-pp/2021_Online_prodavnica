@@ -95,7 +95,7 @@ class _KorpaPageState extends State<KorpaPage> {
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Text(
-                'Dostava za celu Srbiju iznosi 200 rsd.\nZa porudzbine preko 3000 rsd dostava je besplatna. \nVas racun je: $total rsd.'),
+                'Dostava za celu Srbiju iznosi 200.0 rsd.\nZa porudzbine preko 3000.0 rsd dostava je besplatna. \nVas racun je: $total rsd.'),
           ),
           Container(
             height: 50.0,

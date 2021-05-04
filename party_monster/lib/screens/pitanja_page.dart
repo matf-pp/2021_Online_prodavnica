@@ -115,7 +115,7 @@ class _PitanjaPageState extends State<PitanjaPage> {
                 controller: emailcontroller,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'email:',
+                  labelText: 'Email:',
                 ),
               ),
             ),
@@ -140,23 +140,11 @@ class _PitanjaPageState extends State<PitanjaPage> {
                   : () async {
                       String email = emailcontroller.text;
                       String question = questioncontroller.text;
-                      String tekst =
-                          "<h1>Porudzbina</h1>\n<p><b>Ime i prezime: </b> " +
-                              email +
-                              "</p><p><b>Adresa: </b>" +
-                              question +
-                              "</p><p><b>Poruceni proizvodi:</b></p><p>";
-
-                      cart.items.values.toList().forEach((element) => tekst =
-                          tekst +
-                              element.quantity.toString() +
-                              'X ' +
-                              element.name +
-                              '</p><p>');
-                      tekst = tekst +
-                          'Ukupno za uplatu: <b>' +
-                          (cart.totalAmount).toString() +
-                          '</b></p>';
+                      String tekst = "<h1>Porudzbina</h1>\n<p><b>Email: </b> " +
+                          email +
+                          "</p><p><b>Adresa: </b>" +
+                          question +
+                          "</p><p><b>Pitanje:</b></p><p>";
                       sendMail(tekst);
                       emailcontroller.clear();
                       questioncontroller.clear();
@@ -178,7 +166,7 @@ class _PitanjaPageState extends State<PitanjaPage> {
                   constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
-                    "PORUCI",
+                    "POSALJI",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),

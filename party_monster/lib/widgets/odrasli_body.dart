@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/components/horrizontal_view_odrasli.dart';
+import 'package:party_monster/widgets/horrizontal_view_odrasli.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import '../widgets/odrasli_izdvajamo.dart';
 
@@ -11,11 +11,11 @@ class OdrasliBody extends StatelessWidget {
       child: Carousel(
           boxFit: BoxFit.cover,
           images: [
-            AssetImage('pictures/odrasli_carousel_pictures/odrasli1.jpg'),
-            AssetImage('pictures/odrasli_carousel_pictures/odrasli2.jpg'),
-            AssetImage('pictures/odrasli_carousel_pictures/odrasli3.jpg'),
-            AssetImage('pictures/odrasli_carousel_pictures/odrasli4.jpg'),
-            AssetImage('pictures/odrasli_carousel_pictures/pic5.jpeg'),
+            AssetImage('assets/odrasli_carousel_pictures/odrasli1.jpg'),
+            AssetImage('assets/odrasli_carousel_pictures/odrasli2.jpg'),
+            AssetImage('assets/odrasli_carousel_pictures/odrasli3.jpg'),
+            AssetImage('assets/odrasli_carousel_pictures/odrasli4.jpg'),
+            AssetImage('assets/odrasli_carousel_pictures/pic5.jpeg'),
           ],
           autoplay: false,
           animationCurve: Curves.fastOutSlowIn,

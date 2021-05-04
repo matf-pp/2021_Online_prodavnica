@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/widgets/igre_body.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 
 class IgrePage extends StatefulWidget {

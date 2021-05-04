@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 
 class KontaktPage extends StatefulWidget {
@@ -56,7 +56,7 @@ class _KontaktPageState extends State<KontaktPage> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Text(
-              'Za sve dodatne informacije možete nas kontaktirati putem telefona ili mejla, ili nas mozete posetiti na adresi.',
+              'Za sve dodatne informacije možete nas kontaktirati putem telefona ili mejla, ili nas možete posetiti na adresi.',
               textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 18),
             ),
@@ -101,7 +101,7 @@ class _KontaktPageState extends State<KontaktPage> {
                   maxWidth: 25,
                   maxHeight: 25,
                 ),
-                child: Image.asset('pictures/icons/instagram.png',
+                child: Image.asset('assets/icons/instagram.png',
                     fit: BoxFit.cover),
               ),
               title: Text('@party_monster_hsm'),
@@ -112,15 +112,15 @@ class _KontaktPageState extends State<KontaktPage> {
             child: ListTile(
               leading: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minWidth: 25,
-                  minHeight: 25,
-                  maxWidth: 25,
-                  maxHeight: 25,
+                  minWidth: 30,
+                  minHeight: 30,
+                  maxWidth: 30,
+                  maxHeight: 30,
                 ),
-                child: Image.asset('pictures/icons/facebook.png',
-                    fit: BoxFit.cover),
+                child:
+                    Image.asset('assets/icons/facebook.png', fit: BoxFit.cover),
               ),
-              title: Text('Party Monster'),
+              title: Text('PartyMonster'),
             ),
           ),
         ],

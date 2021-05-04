@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/components/horrizontal_view_deca.dart';
+import 'package:party_monster/widgets/horrizontal_view_deca.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import '../widgets/deca_izdvajamo.dart';
 
@@ -11,11 +11,11 @@ class DecaBody extends StatelessWidget {
       child: Carousel(
           boxFit: BoxFit.cover,
           images: [
-            AssetImage('pictures/deca_carousel_pictures/deca1.webp'),
-            AssetImage('pictures/deca_carousel_pictures/deca2.jpg'),
-            AssetImage('pictures/deca_carousel_pictures/deca3.jpg'),
-            AssetImage('pictures/deca_carousel_pictures/deca4.jpg'),
-            AssetImage('pictures/deca_carousel_pictures/deca5.jpg'),
+            AssetImage('assets/deca_carousel_pictures/deca1.webp'),
+            AssetImage('assets/deca_carousel_pictures/deca2.jpg'),
+            AssetImage('assets/deca_carousel_pictures/deca3.jpg'),
+            AssetImage('assets/deca_carousel_pictures/deca4.jpg'),
+            AssetImage('assets/deca_carousel_pictures/deca5.jpg'),
           ],
           autoplay: false,
           animationCurve: Curves.fastOutSlowIn,

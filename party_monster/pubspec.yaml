@@ -61,21 +61,21 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/adultsParty.jpeg
-    - assets/kidsParty.jpeg
-    - assets/izdvojenoIzPonude.jpeg
-    - pictures/deca_carousel_pictures/deca1.webp
-    - pictures/deca_carousel_pictures/deca2.jpg
-    - pictures/deca_carousel_pictures/deca3.jpg
-    - pictures/deca_carousel_pictures/deca4.jpg
-    - pictures/deca_carousel_pictures/deca5.jpg
-    - pictures/odrasli_carousel_pictures/odrasli1.jpg
-    - pictures/odrasli_carousel_pictures/odrasli2.jpg
-    - pictures/odrasli_carousel_pictures/odrasli3.jpg
-    - pictures/odrasli_carousel_pictures/odrasli4.jpg
-    - pictures/odrasli_carousel_pictures/pic5.jpeg
-    - pictures/icons/facebook.png
-    - pictures/icons/instagram.png
+    - assets/home_page/adultsParty.jpeg
+    - assets/home_page/kidsParty.jpeg
+    - assets/home_page/izdvojenoIzPonude.jpeg
+    - assets/deca_carousel_pictures/deca1.webp
+    - assets/deca_carousel_pictures/deca2.jpg
+    - assets/deca_carousel_pictures/deca3.jpg
+    - assets/deca_carousel_pictures/deca4.jpg
+    - assets/deca_carousel_pictures/deca5.jpg
+    - assets/odrasli_carousel_pictures/odrasli1.jpg
+    - assets/odrasli_carousel_pictures/odrasli2.jpg
+    - assets/odrasli_carousel_pictures/odrasli3.jpg
+    - assets/odrasli_carousel_pictures/odrasli4.jpg
+    - assets/odrasli_carousel_pictures/pic5.jpeg
+    - assets/icons/facebook.png
+    - assets/icons/instagram.png
 
 
   #   - images/a_dot_ham.jpeg

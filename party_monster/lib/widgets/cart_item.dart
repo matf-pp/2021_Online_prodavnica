@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/cart.dart';
+import 'package:party_monster/models/cart.dart';
 import 'package:provider/provider.dart';
 
 class CartProduct extends StatefulWidget {

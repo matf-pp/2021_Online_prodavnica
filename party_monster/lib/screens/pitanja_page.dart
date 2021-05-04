@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
@@ -173,7 +173,7 @@ class _PitanjaPageState extends State<PitanjaPage> {
                             BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: Text(
-                          "POSALJI",
+                          "POŠALJI",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white, fontSize: 15),
                         ),

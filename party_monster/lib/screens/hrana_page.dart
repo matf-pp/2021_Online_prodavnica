@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:party_monster/widgets/hrana_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
-import 'package:party_monster/widgets/dekoracija_body.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 
-class DecaDekoracijaPage extends StatefulWidget {
+class DecaHranaPage extends StatefulWidget {
   @override
-  _DecaDekoracijaPageState createState() => _DecaDekoracijaPageState();
+  _DecaHranaPageState createState() => _DecaHranaPageState();
 }
 
-class _DecaDekoracijaPageState extends State<DecaDekoracijaPage> {
+class _DecaHranaPageState extends State<DecaHranaPage> {
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
@@ -18,7 +18,7 @@ class _DecaDekoracijaPageState extends State<DecaDekoracijaPage> {
     return Scaffold(
         appBar: AppBar(
             centerTitle: true,
-            title: Text('Dekoracija'),
+            title: Text('Hrana'),
             flexibleSpace: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -50,6 +50,6 @@ class _DecaDekoracijaPageState extends State<DecaDekoracijaPage> {
                 ),
               ),
             ]),
-        body: ListView(children: <Widget>[DekoracijaProducts()]));
+        body: ListView(children: <Widget>[HranaProducts()]));
   }
 }

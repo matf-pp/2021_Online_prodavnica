@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_monster/widgets/odrasli_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
 

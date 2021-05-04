@@ -126,7 +126,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   Icon(
                     Icons.phone,
                     color: Colors.white,
-                    size: 30,
+                    size: 40,
                   ),
                   SizedBox(
                     width: 10,
@@ -136,7 +136,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -151,9 +151,9 @@ class _DrawerScreenState extends State<DrawerScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.question_answer_outlined,
+                    Icons.contact_support_outlined,
                     color: Colors.white,
-                    size: 30,
+                    size: 40,
                   ),
                   SizedBox(
                     width: 10,
@@ -163,7 +163,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 30),
                   )
                 ],
               ),
@@ -180,7 +180,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   Icon(
                     Icons.info_outline,
                     color: Colors.white,
-                    size: 30,
+                    size: 40,
                   ),
                   SizedBox(
                     width: 10,
@@ -190,7 +190,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 30),
                   )
                 ],
               ),

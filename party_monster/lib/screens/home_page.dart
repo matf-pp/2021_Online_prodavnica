@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/screens/odrasli_page.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
 
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/adultsParty.jpeg',
+                          'assets/home_page/adultsParty.jpeg',
                           fit: BoxFit.cover,
                           height: 380,
                         ),
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/kidsParty.jpeg',
+                          'assets/home_page/kidsParty.jpeg',
                           fit: BoxFit.cover,
                           height: 380,
                         ),
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/izdvojenoIzPonude.jpeg',
+                          'assets/home_page/izdvojenoIzPonude.jpeg',
                           fit: BoxFit.cover,
                         ),
                       ),

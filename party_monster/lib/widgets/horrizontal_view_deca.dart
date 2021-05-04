@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/screens/deca_hrana_page.dart';
-import 'package:party_monster/screens/deca_pice_page.dart';
-import 'package:party_monster/screens/deca_dekoracija_page.dart';
+import 'package:party_monster/screens/hrana_page.dart';
+import 'package:party_monster/screens/sokovi_page.dart';
+import 'package:party_monster/screens/dekoracija_page.dart';
 
 class HorrizontalList extends StatelessWidget {
   @override

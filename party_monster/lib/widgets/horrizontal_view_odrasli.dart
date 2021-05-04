@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/screens/deca_hrana_page.dart';
-import 'package:party_monster/screens/deca_pice_page.dart';
+import 'package:party_monster/screens/hrana_page.dart';
+import 'package:party_monster/screens/sokovi_page.dart';
 import 'package:party_monster/screens/alkohol_page.dart';
 import 'package:party_monster/screens/nargila_page.dart';
 import 'package:party_monster/screens/igre_page.dart';

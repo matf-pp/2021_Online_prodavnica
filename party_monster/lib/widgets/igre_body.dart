@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../product_deca.dart';
+import '../models/products.dart';
 import './Item.dart';
 
 class IgreProducts extends StatelessWidget {

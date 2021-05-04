@@ -1,10 +1,10 @@
 //Ovo je Korpa page
 
 import 'package:flutter/material.dart';
-import 'package:party_monster/cart.dart';
-import 'package:party_monster/orders.dart';
+import 'package:party_monster/models/cart.dart';
+import 'package:party_monster/models/orders.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import '../widgets/cart_item.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
@@ -95,7 +95,7 @@ class _KorpaPageState extends State<KorpaPage> {
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Text(
-                'Dostava za celu Srbiju iznosi 200.0 rsd.\nZa porudzbine preko 3000.0 rsd dostava je besplatna. \nVas racun je: $total rsd.'),
+                'Dostava za celu Srbiju iznosi 200.0 rsd.\nZa porudžbine preko 3000.0 rsd dostava je besplatna. \nVaš račun je $total rsd.'),
           ),
           Container(
             height: 50.0,
@@ -108,11 +108,11 @@ class _KorpaPageState extends State<KorpaPage> {
                       String name = namecontroller.text;
                       String adresse = adressecontroller.text;
                       String tekst =
-                          "<h1>Porudzbina</h1>\n<p><b>Ime i prezime: </b> " +
+                          "<h1>Porudžbina</h1>\n<p><b>Ime i prezime: </b> " +
                               name +
                               "</p><p><b>Adresa: </b>" +
                               adresse +
-                              "</p><p><b>Poruceni proizvodi:</b></p><p>";
+                              "</p><p><b>Poručeni proizvodi:</b></p><p>";
 
                       cart.items.values.toList().forEach((element) => tekst =
                           tekst +
@@ -151,7 +151,7 @@ class _KorpaPageState extends State<KorpaPage> {
                   constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
-                    "PORUCI",
+                    "PORUČI",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:party_monster/product_deca.dart';
+import 'package:party_monster/models/products.dart';
 import 'package:provider/provider.dart';
-import '../product_deca.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 
 class Item extends StatelessWidget {
   final String name;

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:party_monster/widgets/deca_body.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:provider/provider.dart';
-import '../cart.dart';
+import '../models/cart.dart';
 import 'package:badges/badges.dart';
 
 class DecaPage extends StatefulWidget {

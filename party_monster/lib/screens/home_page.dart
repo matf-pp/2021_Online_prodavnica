@@ -18,13 +18,9 @@ class _HomePageState extends State<HomePage> {
   double yOffset = 0;
   double scaleFactor = 1;
   bool isDrawerOpen = false; //Da li je otvoren side meni
-  // bool isNightMode = true; //Da li je nocni rezim aktiviran
-  //TO DO- Treba da se dovrsi night Mode ili da se obrise ta opcija
   Color colorText = Colors.white;
   Color nightColor1 = Colors.blue.shade900;
   Color nightColor2 = Colors.red.shade900;
-  Color lightColor1 = Colors.blue.shade300;
-  Color lightColor2 = Colors.red.shade300;
   Color color1 = Colors.blue.shade900;
   Color color2 = Colors.red.shade900;
 
@@ -72,35 +68,6 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
             actions: <Widget>[
-              // isNightMode
-              //  ? IconButton(
-              // icon: Icon(
-              //  Icons.wb_sunny_rounded,
-              //  color: colorText,
-              //  ),
-              //  onPressed: () {
-              //  setState(() {
-              //   isNightMode = false;
-              //   colorText = Colors.black;
-              //    color1 = lightColor1;
-              //   color2 = lightColor2;
-              // });
-              //},
-              // )
-              // : IconButton(
-              // icon: Icon(
-              //   Icons.nightlight_round,
-              //  color: colorText,
-              //),
-              //onPressed: () {
-              //setState(() {
-              //isNightMode = true;
-              //colorText = Colors.white;
-              //color1 = nightColor1;
-              // color2 = nightColor2;
-              // });
-              // },
-              // ),
               Badge(
                 badgeContent: Text('$pdtnumber',
                     style: TextStyle(color: Colors.white, fontSize: 10)),

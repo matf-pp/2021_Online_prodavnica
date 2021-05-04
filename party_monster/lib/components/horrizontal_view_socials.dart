@@ -10,11 +10,12 @@ class HorrizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Social(
-            imgUrl: '',
+            imgUrl:
+                'https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg',
             opis: '@party_monster',
           ),
           Social(
-            imgUrl: '',
+            imgUrl: 'https://img.icons8.com/ios/452/facebook-new.png',
             opis: 'PartyMonster',
           ),
         ],

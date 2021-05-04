@@ -18,7 +18,7 @@ class _KontaktPageState extends State<KontaktPage> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
-          title: Text('Kontakt'),
+          title: Text('Kontaktirajte nas'),
           flexibleSpace: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -92,7 +92,15 @@ class _KontaktPageState extends State<KontaktPage> {
               title: Text('Studentski trg 16, 11000 Beograd'),
             ),
           ),
-          HorrizontalList(),
+          Tab(
+              icon: new Image.asset(
+                  "https://i.pinimg.com/originals/1a/2a/80/1a2a80112ef4d3e431289f09d568f512.png"),
+              text: "Insta"),
+          Tab(
+              icon: new Image.asset(
+                  "https://img.icons8.com/ios/452/facebook-new.png"),
+              text: "Fejs"),
+          //HorrizontalList(),
         ],
       )),
     );

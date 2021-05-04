@@ -74,6 +74,9 @@ flutter:
     - pictures/odrasli_carousel_pictures/odrasli3.jpg
     - pictures/odrasli_carousel_pictures/odrasli4.jpg
     - pictures/odrasli_carousel_pictures/pic5.jpeg
+    - pictures/icons/facebook.png
+    - pictures/icons/instagram.png
+
 
   #   - images/a_dot_ham.jpeg
 

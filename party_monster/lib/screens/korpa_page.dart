@@ -54,13 +54,31 @@ class _KorpaPageState extends State<KorpaPage> {
                     cart.items.values.toList()[i].quantity,
                     cart.items.values.toList()[i].name)),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextField(
-              controller: namecontroller,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Ime i prezime:',
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade300,
+                  blurRadius: 50.0,
+                  offset: Offset(0, -10), // Shadow position
+                ),
+                BoxShadow(
+                  color: Colors.white,
+                  blurRadius: 40.0,
+                  offset: Offset(0, 40), // Shadow position
+                ),
+              ],
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              child: TextField(
+                controller: namecontroller,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Ime i prezime:',
+                ),
               ),
             ),
           ),

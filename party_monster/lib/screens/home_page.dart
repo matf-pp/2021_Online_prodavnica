@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/adultsParty.jpg',
+                          'assets/adultsParty.jpeg',
                           fit: BoxFit.cover,
                           height: 380,
                         ),
@@ -170,30 +170,29 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/kidsParty.jpg',
+                          'assets/kidsParty.jpeg',
                           fit: BoxFit.cover,
                           height: 380,
                         ),
                       ),
                     ),
-                    //Dugme IzdvojenoIzPonude
-                    // Container(
-                    //   child: TextButton(
-                    //     style:
-                    //         TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
-                    //     onPressed: () {
-                    //       Navigator.push(
-                    //         context,
-                    //         MaterialPageRoute(
-                    //             builder: (context) => IzdvojenoPage()),
-                    //       );
-                    //     },
-                    //     child: Image.asset(
-                    //       'assets/izdvojenoIzPonude.png',
-                    //       fit: BoxFit.cover,
-                    //     ),
-                    //   ),
-                    // ),
+                    Container(
+                      child: TextButton(
+                        style:
+                            TextButton.styleFrom(padding: EdgeInsets.all(0.0)),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => KorpaPage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/izdvojenoIzPonude.jpeg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

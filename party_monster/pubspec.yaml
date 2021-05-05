@@ -76,6 +76,11 @@ flutter:
     - assets/odrasli_carousel_pictures/pic5.jpeg
     - assets/icons/facebook.png
     - assets/icons/instagram.png
+    - assets/screenshots/logo.jpeg
+    - assets/screenshots/pocetni.jpg
+    - assets/screenshots/odrasli.jpg
+    - assets/screenshots/deca.jpg
+    - assets/screenshots/korpa.jpg
 
 
   #   - images/a_dot_ham.jpeg

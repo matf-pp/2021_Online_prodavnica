@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:party_monster/screens/deca_page.dart';
 import 'package:party_monster/screens/korpa_page.dart';
 import 'package:party_monster/screens/odrasli_page.dart';
+import 'package:party_monster/screens/o_nama_page.dart';
 import '../models/cart.dart';
 import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
@@ -151,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => KorpaPage()),
+                                builder: (context) => ONamaPage()),
                           );
                         },
                         child: Image.asset(

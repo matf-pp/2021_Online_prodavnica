@@ -53,126 +53,128 @@ class _PitanjaPageState extends State<PitanjaPage> {
               ),
             ),
           ]),
-      body: SafeArea(
-          child: Column(
-        //mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Card(
-            margin: EdgeInsets.all(10.0),
-            child: ListTile(
+      body: SingleChildScrollView(
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Card(
+              margin: EdgeInsets.all(10.0),
+              child: ListTile(
+                  leading: Icon(
+                    Icons.question_answer,
+                    color: Colors.red.shade900,
+                  ),
+                  title: Text('Da li vršite dostavu i van Beograda?'),
+                  subtitle:
+                      Text('Da, dostavu vršimo na teritoriji cele Srbije.')),
+            ),
+            Card(
+              margin: EdgeInsets.all(10.0),
+              child: ListTile(
                 leading: Icon(
                   Icons.question_answer,
                   color: Colors.red.shade900,
                 ),
-                title: Text('Da li vršite dostavu i van Beograda?'),
-                subtitle:
-                    Text('Da, dostavu vršimo na teritoriji cele Srbije.')),
-          ),
-          Card(
-            margin: EdgeInsets.all(10.0),
-            child: ListTile(
-              leading: Icon(
-                Icons.question_answer,
-                color: Colors.red.shade900,
+                title: Text('Koja je cena dostave?'),
+                subtitle: Text(
+                    'Dostava iznosi 200.0 rsd. Za sve porudžbine preko 3000.0 rsd dostava je besplatna.'),
               ),
-              title: Text('Koja je cena dostave?'),
-              subtitle: Text(
-                  'Dostava iznosi 200.0 rsd. Za sve porudžbine preko 3000.0 rsd dostava je besplatna.'),
             ),
-          ),
-          Card(
-            margin: EdgeInsets.all(10.0),
-            child: ListTile(
-              leading: Icon(
-                Icons.question_answer,
-                color: Colors.red.shade900,
-              ),
-              title: Text('Koji je rok isporuke?'),
-              subtitle: Text(
-                  'Porudžbinu mozete očekivati na svojoj adresi u roku od 48 sati.'),
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.shade300,
-                  blurRadius: 50.0,
-                  offset: Offset(0, -10), // Shadow position
+            Card(
+              margin: EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.question_answer,
+                  color: Colors.red.shade900,
                 ),
-                BoxShadow(
-                  color: Colors.white,
-                  blurRadius: 40.0,
-                  offset: Offset(0, 40), // Shadow position
-                ),
-              ],
-            ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-              child: TextField(
-                controller: emailcontroller,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Email:',
-                ),
+                title: Text('Koji je rok isporuke?'),
+                subtitle: Text(
+                    'Porudžbinu mozete očekivati na svojoj adresi u roku od 48 sati.'),
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextFormField(
-              controller: questioncontroller,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Pitanje:',
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade300,
+                    blurRadius: 50.0,
+                    offset: Offset(0, -10), // Shadow position
+                  ),
+                  BoxShadow(
+                    color: Colors.white,
+                    blurRadius: 40.0,
+                    offset: Offset(0, 40), // Shadow position
+                  ),
+                ],
               ),
-            ),
-          ),
-          Container(
-            height: 50.0,
-            margin: EdgeInsets.all(10.0),
-            // ignore: deprecated_member_use
-            child: RaisedButton(
-              onPressed: () async {
-                String email = emailcontroller.text;
-                String question = questioncontroller.text;
-                String tekst = "<h1>Pitanje</h1>\n<p><b>Email: </b> " +
-                    email +
-                    "</p><p><b>Pitanje: </b></p>" +
-                    question;
-                sendMail(tekst);
-                emailcontroller.clear();
-                questioncontroller.clear();
-              },
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(80.0)),
-              padding: EdgeInsets.all(0.0),
-              child: Ink(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: <Color>[
-                          Colors.blue.shade900,
-                          Colors.red.shade900
-                        ]),
-                    borderRadius: BorderRadius.circular(30.0)),
-                child: Container(
-                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "POŠALJI",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextField(
+                  controller: emailcontroller,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email:',
                   ),
                 ),
               ),
             ),
-          ),
-        ],
-      )),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              child: TextFormField(
+                controller: questioncontroller,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Pitanje:',
+                ),
+              ),
+            ),
+            Container(
+              height: 50.0,
+              margin: EdgeInsets.all(10.0),
+              // ignore: deprecated_member_use
+              child: RaisedButton(
+                onPressed: () async {
+                  String email = emailcontroller.text;
+                  String question = questioncontroller.text;
+                  String tekst = "<h1>Pitanje</h1>\n<p><b>Email: </b> " +
+                      email +
+                      "</p><p><b>Pitanje: </b></p>" +
+                      question;
+                  sendMail(tekst);
+                  emailcontroller.clear();
+                  questioncontroller.clear();
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: <Color>[
+                            Colors.blue.shade900,
+                            Colors.red.shade900
+                          ]),
+                      borderRadius: BorderRadius.circular(30.0)),
+                  child: Container(
+                    constraints:
+                        BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "POŠALJI",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

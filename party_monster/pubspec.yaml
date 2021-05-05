@@ -83,6 +83,10 @@ flutter:
     - assets/screenshots/korpa.jpg
     - assets/screenshots/about.jpeg
     - assets/screenshots/kontakt.jpeg
+    - assets/screenshots/meni.jpeg
+    - assets/screenshots/food.jpeg
+    - assets/screenshots/decoration.jpeg
+    - assets/screenshots/games.jpeg
 
 
   #   - images/a_dot_ham.jpeg

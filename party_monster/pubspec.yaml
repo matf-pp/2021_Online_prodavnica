@@ -81,6 +81,8 @@ flutter:
     - assets/screenshots/odrasli.jpg
     - assets/screenshots/deca.jpg
     - assets/screenshots/korpa.jpg
+    - assets/screenshots/about.jpeg
+    - assets/screenshots/kontakt.jpeg
 
 
   #   - images/a_dot_ham.jpeg
